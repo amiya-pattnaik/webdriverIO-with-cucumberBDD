@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## ngtaf4js-with-cucumber
 ======================
 This repository contains a collection of sample webdriverIO (Selenium - Node.js/JavaScript) projects and libraries that demonstrate how to use the tool and develop automation script using Cucumber BDD framework. It support ES6 (via babel-register) and uses Grunt to manage tasks. It generate Spec, Dot, JUNIT, Allure, JSON reporters as well.
@@ -147,3 +148,6 @@ Industry is moving towards Node.js / JavaScript, Angularjs, Full-Stack world. We
 ## Licensing
 
 MIT
+=======
+# ngtaf4js-boilerplate-cucumber
+>>>>>>> 4c9915d77ae5d87515bda2fb7f3350a692574c9c
