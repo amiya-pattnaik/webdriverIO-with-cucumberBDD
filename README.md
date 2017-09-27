@@ -64,15 +64,15 @@ WebdriverIO uses configuration files to setup and execute tests in specific ways
 
 WebdriverIO uses several different types of test reporters to communicate pass/failure.  
 
-# Dot
+### Dot
 
 To use the dot reporter just add 'dot' to the reporters array in the config file. The dot reporter prints for each test spec a dot. If colors are enabled on your machine you will see three different colors for dots. Yellow dots mean that at least one browser has executed that spec. A green dot means all browser passed that spec and a red to means that at least one browser failed that spec. All config files have this turned on by default.
 
-# Spec
+### Spec
 
 Test reporter, that prints detailed results to console.
 
-# Allure
+### Allure
 
 The Allure Reporter creates [Allure](http://allure.qatools.ru/) test reports which is an HTML generated website with all necessary information to debug your test results and take a look on error screenshots. Add allure to the reporters array in config file and define the output directory of the allure reports.
 
@@ -80,13 +80,13 @@ To generate and view an allure report locally, run `npm run allure-report`.
 
 Allure has several other reporting tools optimized for the CI server of your choice.  You can [view the documentation here](http://wiki.qatools.ru/display/AL/Reporting).
 
-# junit/xunit
+### junit/xunit
 
 The JUnit reporter helps you to create xml reports for your CI server. Add it to the reports array in the config file and define the directory where the xml files should get stored. webdriverIO will create an xml file for each instance under test and the filename will contain the browser and OS.
 
 To generate and view an allure report locally, run `npm run junit-report`.
 
-# JSON
+### JSON
 
 The JSON reporter is especially versatile. Since it produces a literal in a key : value pair, help to read, translate execution results to any custom reporter / it can be used to transport reporter events to another process and format them there, or to store the execution results back to any standard RDBMS or to NoSQL like mongodb with very minimal effort.
 
@@ -96,7 +96,7 @@ You can write test either by using Cucumber BDD framework or Jasmine BDD framewo
 
 For complete WebdriverIO API](http://webdriver.io/api.html) methods to write your automation.
 
-# Using Cucumber JavaScript framework
+### Using Cucumber JavaScript framework
 
 Tests are written in the Cucumber framework using the Gherkin Syntax. More about Gherkin & Cucumber can be found at https://cucumber.io/docs/reference
 
