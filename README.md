@@ -1,5 +1,5 @@
 ## ngtaf4js-with-cucumber
-======================
+
 ngtaf4js(Next Generation Test Automation Framework 4 JavaScript. This repository contains a collection of sample webdriverIO (Selenium - Node.js/JavaScript) projects and libraries that demonstrate how to use the tool and develop automation script using Cucumber 3.0 BDD framework. It support ES6 (via babel-register) and uses Grunt to manage tasks. It generate Spec, JUNIT, Allure, JSON reporters as well.
 
 ## Installation
