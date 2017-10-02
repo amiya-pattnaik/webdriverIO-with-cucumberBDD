@@ -41,11 +41,11 @@ To take full advantage of the command line and use grunt tasks you will need to 
 
               setx NODE_TLS_REJECT_UNAUTHORIZED 0
 
-    sudo npm install selenium-standalone@latest -g
-    sudo selenium-standalone install
-    selenium-standalone start
+              sudo npm install selenium-standalone@latest -g
+              sudo selenium-standalone install
+              selenium-standalone start
 
-                        OR
+  OR
 
   2. Download the latest selenium standalone server version: and then for example
     $ java -jar selenium-server-standalone-3.4.0.jar. This option is require if you have not done the step No-2. Else ignore it. this is the other way of doing.
