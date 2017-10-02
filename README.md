@@ -1,6 +1,6 @@
 ## ngtaf4js-with-cucumber
 ======================
-This repository contains a collection of sample webdriverIO (Selenium - Node.js/JavaScript) projects and libraries that demonstrate how to use the tool and develop automation script using Cucumber BDD framework. It support ES6 (via babel-register) and uses Grunt to manage tasks. It generate Spec, Dot, JUNIT, Allure, JSON reporters as well.
+ngtaf4js(Next Generation Test Automation Framework 4 JavaScript. This repository contains a collection of sample webdriverIO (Selenium - Node.js/JavaScript) projects and libraries that demonstrate how to use the tool and develop automation script using Cucumber 3.0 BDD framework. It support ES6 (via babel-register) and uses Grunt to manage tasks. It generate Spec, JUNIT, Allure, JSON reporters as well.
 
 ## Installation
 
@@ -11,8 +11,9 @@ Install JDK 1.8 if not and make sure class path is set properly. JAVA is require
 Install Node.JS from the site - https://nodejs.org/en/  take the LTS version based on your Operating system. Please make sure you install NodeJS globally. Recommended version is 6.10.0. OR  If you have nvm installed globally, you run `nvm install` to get the latest version of node specified in the`.nvmrc` file [here](/.nvmrc).  If you don't use nvm, be sure that you are using a compatible version. Further details on nvm can be found on the official [github page](https://github.com/creationix/nvm). MAC OSX users are best suited to install nvm with homebrew `brew install nvm`.
 
 Once installation is done - open terminal (MAC OSX) or command prompt (windows OS) and type below command to verify NodeJS has been installed properly.
-  node --version
-  npm --version
+
+        node --version
+        npm --version
 
 Above command should print out the version that you have installed.
 
@@ -29,16 +30,23 @@ To take full advantage of the command line and use grunt tasks you will need to 
   Once all the node dependency modules are installed (through `npm install`) then for development, you can run  `npm run selenium-postinstall` followed by `npm run selenium-start`.  That's all there is to it.!. Please note that this step is only one time activity at the initial framework set up. Alternatively you can also use below options to start the selenium server
 
   1. Install Selenium (selenium-standalone) through NPM (this is the recommended way to install) as you can use it as a services in your framework without worrying to start the selenium server manually. Please note that you follow this step if `selenium-standalone` package in not been installed through package manager. If you are behind a specific proxy. Then you need to set some environment variables:
-        On OSX:
+
+#####        On OSX:
+
               NODE_TLS_REJECT_UNAUTHORIZED=0 selenium-standalone install`
+
               NODE_TLS_REJECT_UNAUTHORIZED=0 selenium-standalone start
-        On Windows:
-          setx NODE_TLS_REJECT_UNAUTHORIZED 0
+
+#####          On Windows:
+
+              setx NODE_TLS_REJECT_UNAUTHORIZED 0
 
     sudo npm install selenium-standalone@latest -g
     sudo selenium-standalone install
     selenium-standalone start
+
                         OR
+
   2. Download the latest selenium standalone server version: and then for example
     $ java -jar selenium-server-standalone-3.4.0.jar. This option is require if you have not done the step No-2. Else ignore it. this is the other way of doing.
 
@@ -63,15 +71,15 @@ WebdriverIO uses configuration files to setup and execute tests in specific ways
 
 WebdriverIO uses several different types of test reporters to communicate pass/failure.  
 
-### Dot
+##### Dot
 
 To use the dot reporter just add 'dot' to the reporters array in the config file. The dot reporter prints for each test spec a dot. If colors are enabled on your machine you will see three different colors for dots. Yellow dots mean that at least one browser has executed that spec. A green dot means all browser passed that spec and a red to means that at least one browser failed that spec. All config files have this turned on by default.
 
-### Spec
+##### Spec
 
 Test reporter, that prints detailed results to console.
 
-### Allure
+##### Allure
 
 The Allure Reporter creates [Allure](http://allure.qatools.ru/) test reports which is an HTML generated website with all necessary information to debug your test results and take a look on error screenshots. Add allure to the reporters array in config file and define the output directory of the allure reports.
 
@@ -79,13 +87,13 @@ To generate and view an allure report locally, run `npm run allure-report`.
 
 Allure has several other reporting tools optimized for the CI server of your choice.  You can [view the documentation here](http://wiki.qatools.ru/display/AL/Reporting).
 
-### junit/xunit
+##### junit/xunit
 
 The JUnit reporter helps you to create xml reports for your CI server. Add it to the reports array in the config file and define the directory where the xml files should get stored. webdriverIO will create an xml file for each instance under test and the filename will contain the browser and OS.
 
 To generate and view an allure report locally, run `npm run junit-report`.
 
-### JSON
+##### JSON
 
 The JSON reporter is especially versatile. Since it produces a literal in a key : value pair, help to read, translate execution results to any custom reporter / it can be used to transport reporter events to another process and format them there, or to store the execution results back to any standard RDBMS or to NoSQL like mongodb with very minimal effort.
 
@@ -95,7 +103,7 @@ You can write test either by using Cucumber BDD framework or Jasmine BDD framewo
 
 For complete WebdriverIO API](http://webdriver.io/api.html) methods to write your automation.
 
-### Using Cucumber JavaScript framework
+#### Using Cucumber JavaScript framework
 
 Tests are written in the Cucumber framework using the Gherkin Syntax. More about Gherkin & Cucumber can be found at https://cucumber.io/docs/reference
 
@@ -147,6 +155,3 @@ Industry is moving towards Node.js / JavaScript, Angularjs, Full-Stack world. We
 ## Licensing
 
 MIT
-=======
-# ngtaf4js-boilerplate-cucumber
->>>>>>> 4c9915d77ae5d87515bda2fb7f3350a692574c9c
