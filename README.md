@@ -1,6 +1,6 @@
 ## ngtaf4js-with-cucumber
 
-ngtaf4js(Next Generation Test Automation Framework 4 JavaScript. This repository contains a collection of sample webdriverIO (Selenium - Node.js/JavaScript) projects and libraries that demonstrate how to use the tool and develop automation script using Cucumber 3.0 BDD framework. It support ES6 (via babel-register) and uses Grunt to manage tasks. It generate Spec, JUNIT, Allure, JSON reporters as well.
+ngtaf4js(Next Generation Test Automation Framework 4 JavaScript with cucumber. This repository contains a collection of sample webdriverIO (Selenium - Node.js/JavaScript) projects and libraries that demonstrate how to use the tool and develop automation script using Cucumber 3.0 BDD framework. It support ES6 (via babel-register) and uses Grunt to manage tasks. It generate Spec, JUNIT, Allure, JSON reporters as well.
 
 ## Installation
 
@@ -29,7 +29,7 @@ To take full advantage of the command line and use grunt tasks you will need to 
 
   Once all the node dependency modules are installed (through `npm install`) then for development, you can run  `npm run selenium-postinstall` followed by `npm run selenium-start`.  That's all there is to it.!. Please note that this step is only one time activity at the initial framework set up. Alternatively you can also use below options to start the selenium server
 
-  1. Install Selenium (selenium-standalone) through NPM (this is the recommended way to install) as you can use it as a services in your framework without worrying to start the selenium server manually. Please note that you follow this step if `selenium-standalone` package in not been installed through package manager. If you are behind a specific proxy. Then you need to set some environment variables:
+  1. Install Selenium (selenium-standalone) through NPM (this is the recommended way to install) as you can use it as a services in your framework without worrying to start the selenium server manually. Please note that you follow this below step if `selenium-standalone` package in not been installed through package manager. If you are behind a specific proxy. Then you need to set some environment variables:
 
 #####        On OSX:
 
@@ -41,9 +41,9 @@ To take full advantage of the command line and use grunt tasks you will need to 
 
               setx NODE_TLS_REJECT_UNAUTHORIZED 0
 
-              sudo npm install selenium-standalone@latest -g
-              sudo selenium-standalone install
-              selenium-standalone start
+  sudo npm install selenium-standalone@latest -g
+  sudo selenium-standalone install
+  selenium-standalone start
 
   OR
 
