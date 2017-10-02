@@ -42,7 +42,9 @@ To take full advantage of the command line and use grunt tasks you will need to 
               setx NODE_TLS_REJECT_UNAUTHORIZED 0
 
   sudo npm install selenium-standalone@latest -g
+
   sudo selenium-standalone install
+  
   selenium-standalone start
 
   OR
