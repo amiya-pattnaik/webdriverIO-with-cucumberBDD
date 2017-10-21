@@ -1,6 +1,7 @@
-## ngtaf4js-with-cucumber
 
-ngtaf4js(Next Generation Test Automation Framework 4 JavaScript with cucumber. This repository contains a collection of sample webdriverIO (Selenium - Node.js/JavaScript) projects and libraries that demonstrate how to use the tool and develop automation script using Cucumber 3.0 BDD framework. It support ES6 (via babel-register) and uses Grunt to manage tasks. It generate Spec, JUNIT, Allure, JSON reporters as well.
+## WebdriverIO boilerplate code with Cucumber BDD
+
+This repository contains a collection of sample webdriverIO (Selenium - Node.js/JavaScript) projects and libraries that demonstrate how to use the tool and develop automation script using the Cucumber (v 3.0.0) BDD framework. It support ES6 (via babel-register) and uses Grunt to manage tasks, provides utilities to read data from MS-Excel, executes SQL statements to any database for end to end testing. It generate Spec, JUNIT, Allure, JSON reporters as well.
 
 ## Installation
 
@@ -44,7 +45,7 @@ To take full advantage of the command line and use grunt tasks you will need to 
   sudo npm install selenium-standalone@latest -g
 
   sudo selenium-standalone install
-  
+
   selenium-standalone start
 
   OR
