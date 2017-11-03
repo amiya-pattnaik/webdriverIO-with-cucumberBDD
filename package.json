@@ -25,6 +25,8 @@
   "author": "Amiya Pattanaik <amiya_pattnaik@yahoo.com>",
   "license": "ISC",
   "dependencies": {
+    "any-db": "^2.2.0",
+    "any-db-jdbc": "^1.0.0",
     "appium": "^1.6.3",
     "assert": "^1.4.1",
     "babel-core": "^6.7.4",
