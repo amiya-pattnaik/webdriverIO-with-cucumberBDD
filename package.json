@@ -22,7 +22,7 @@
     "webdriver",
     "automation"
   ],
-  "author": "Amiya Pattanaik <amiya_pattnaik@yahoo.com>",
+  "author": "Amiya Pattanaik <pattnaik_amiya@yahoo.com>",
   "license": "ISC",
   "dependencies": {
     "any-db": "^2.2.0",
