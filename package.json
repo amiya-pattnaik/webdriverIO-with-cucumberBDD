@@ -1,6 +1,6 @@
 {
   "name": "ngtaf4js-cucumber",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Next Generation Test Automation Framework ( web & mobile ui-automation) 4(for) JavaScript binding",
   "main": "index.js",
   "scripts": {
