@@ -1,9 +1,9 @@
 
-## WebdriverIO boilerplate code with Cucumber BDD
+### WebdriverIO boilerplate code with Cucumber BDD
 
 This repository contains a collection of sample webdriverIO (Selenium - Node.js/JavaScript) projects and libraries that demonstrate how to use the tool and develop automation script using the Cucumber (v 3.0.0) BDD framework. It support ES6 (via babel-register) and uses Grunt to manage tasks, provides utilities to read data from MS-Excel, executes SQL statements to any database for end to end testing. It generate Spec, JUNIT, Allure, JSON reporters as well.
 
-## Installation
+### Installation
 
 This project is tested on ***Node 6.10.0*** and up.  While earlier versions of node may be compatible, they have not been tested or verified.
 
@@ -24,7 +24,7 @@ To take full advantage of the command line and use grunt tasks you will need to 
 
   npm install -g  grunt-cli
 
-## Selenium, Appium
+### Selenium, Appium
 
   To run your test You must have selenium / Appium server up and running to execute any WebdriverIO tests, or it will fail fast with an error. There are two ways you can run selenium.
 
@@ -55,7 +55,7 @@ To take full advantage of the command line and use grunt tasks you will need to 
 
   Note: While installing through sudo command - you need to provide System admin password. On windows dont use `sudo`
 
-## Run Some Sample Tests
+### Run Some Sample Tests
 
 To execute the entire test suite in local development,
 1. `npm run tests`
@@ -64,13 +64,13 @@ To execute the entire test suite in local development,
 
 2. use `grunt webdriver:test`.  This executes all features in the [`./test/features/*.feature`]  directory with a Spec reporter by default and references the `suite.yourSpecific.conf.js` file. Refer to the ./test/config of cucumber-bdd
 
-Note: Before running mobile tests, perform the requisite for Appium setup. For hassle free Appium setup on OSX refer [appium-setup-made-easy-OSX](https://github.com/amiya-pattnaik/appium-setup-made-easy-OSX) OR refer [Appium Docs](http://appium.io/getting-started.html?lang=en)
+Note: Before running mobile tests, perform the requisite Appium setup. For hassle free Appium setup on OSX refer [appium-setup-made-easy-OSX](https://github.com/amiya-pattnaik/appium-setup-made-easy-OSX) OR refer [Appium Docs](http://appium.io/getting-started.html?lang=en)
 
-## Config Files
+### Config Files
 
 WebdriverIO uses configuration files to setup and execute tests in specific ways.  The configuration is fully customizable, and different functions can be invoked before, during and after each test or test suite.  Config files are found in the `/test/config/` directory and all end with `*.conf.js`.  These can be called via the the cli
 
-## Reporters
+### Reporters
 
 WebdriverIO uses several different types of test reporters to communicate pass/failure.  
 
@@ -100,13 +100,13 @@ To generate and view an allure report locally, run `npm run junit-report`.
 
 The JSON reporter is especially versatile. Since it produces a literal in a key : value pair, help to read, translate execution results to any custom reporter / it can be used to transport reporter events to another process and format them there, or to store the execution results back to any standard RDBMS or to NoSQL like mongodb with very minimal effort.
 
-## Develop automation scripts (for both desktop browser and mobile browser / app)
+### Develop automation scripts (for both desktop browser and mobile browser / app)
 
 You can write test either by using Cucumber BDD framework or Jasmine BDD framework. You can choose javascript based design pattern or ES6 based. This project is ES6 friendly (via babel-register)
 
 For complete WebdriverIO API](http://webdriver.io/api.html) methods to write your automation.
 
-#### Using Cucumber JavaScript framework
+##### Using Cucumber JavaScript framework
 
 Tests are written in the Cucumber framework using the Gherkin Syntax. More about Gherkin & Cucumber can be found at https://cucumber.io/docs/reference
 
@@ -136,7 +136,7 @@ Feature: Performing a Yahoo Search
         |searchItem|
         |"Selenium Webdriver"|
 
-## The Page Object Design Pattern
+### The Page Object Design Pattern
 
 Within your web app's UI there are areas that your tests interact with. A Page Object simply models these as objects within the test code. This reduces the amount of duplicated code and means that if the UI changes, the fix need only be applied in one place. In other wards one of the challenges of writing test automation is keeping your [selectors] (classes, id's, or xpath' etc.) up to date with the latest version of your code.  The next challenge is to keep the code you write nice and DRY (Don't Repeat Yourself).  The page object pattern helps us accomplish this in one solution.  Instead of including our selectors in our step definitions(in cucumber) or in Spec file (in Jasmine or Mocha), we instead place them in a `<pagename>.js` file where we can manage all these selectors and methods together. Your test file should only call the test methods.
 
@@ -146,7 +146,7 @@ An object called `Page` will be created with the prototype model or by ES6 class
 
 It is preferable to separate page objects into individual files that end with `.page.js`.  These will require the basic `page.js` prototype construct / abstract class and create new objects for each individual page. For more information on the implementation, refer to the `/test/pageobjects` directory.
 
-## Working with DataBase
+### Working with DataBase
 
 A relational database is, simply, a database that stores related information across multiple tables and allows you to query information in more than one table at the same time. Your application under test displays data from these database. So when you are actually performing automation testing it is very likely that you need to verify the data between actual (which you got it from browser) Vs expected (which you will get it from the database by executing SQL statements on database). This can be done by below statements in your code.
 
@@ -157,21 +157,21 @@ for more information, please visit `node-any-jdbc` module which can be [found he
 
 Note: `node-any-jdbc` is already packaged under this project. You can start using it right away. You can also find sample examples under /util-examples/database-example.js
 
-## Common utilities
+### Common utilities
 
 Refer to the common Javascript functions that provides clean, performant methods for manipulating objects, collections, MS-Excel utilities, DataBase utilities etc. Few sample code can be found in /util-examples/
 
 Use [Underscore.js](http://underscorejs.org/) already bundled inside the framework which provides over 100 functions that support both your favorite workaday functional helpers: map, filter, invoke — as well as more specialized goodies: function binding, javascript templating, creating quick indexes, deep equality testing, and so on.
 
-## Contribution
+### Contribution
 
 Create a fork of the project into your own repository. Make all your necessary changes and create a pull request with a description on what was added or removed and details explaining the changes in lines of code. If approved, project owners will merge it.
 
-## History
+### History
 
 Industry is moving towards Node.js / JavaScript, Angularjs, Full-Stack world. WebdriverIO, a JavaScript binding wrapper for Selenium Webdriver, was originated by Camilo Tapia's initial Selenium project called WebdriverJS, which was the first Webdriver project on NPM. In 2014, the project was renamed WebdriverIO later on. This repository is a pre-configured version of webdriverIO meant to jump-start the process of writing new test automation or adding test automation to existing node.js applications.
 
 
-## Licensing
+### Licensing
 
 MIT
