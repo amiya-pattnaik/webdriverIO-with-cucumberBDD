@@ -32,15 +32,11 @@ To take full advantage of the command line and use grunt tasks you will need to 
 
   1. Install Selenium (selenium-standalone) through NPM (this is the recommended way to install) as you can use it as a services in your framework without worrying to start the selenium server manually. Please note that you follow this below step if `selenium-standalone` package in not been installed through package manager. If you are behind a specific proxy, then in that case you need to set environment variables:
 
-#####        On OSX:
-
+      `On OSX:
               NODE_TLS_REJECT_UNAUTHORIZED=0 selenium-standalone install
-
               NODE_TLS_REJECT_UNAUTHORIZED=0 selenium-standalone start
-
-#####          On Windows:
-
-              setx NODE_TLS_REJECT_UNAUTHORIZED 0
+        On Windows:
+              setx NODE_TLS_REJECT_UNAUTHORIZED 0`
 
   sudo npm install selenium-standalone@latest -g
 
@@ -53,7 +49,7 @@ To take full advantage of the command line and use grunt tasks you will need to 
   2. Download the latest selenium standalone server version: and then for example
     $ java -jar selenium-server-standalone-3.4.0.jar. This option is require if you have not done the step No-2. Else ignore it. this is the other way of doing.
 
-  Note: While installing through sudo command - you need to provide System admin password.
+  Note: While installing through sudo command - you need to provide System admin password. On windows dont use `sudo`
 
 ## Run Some Sample Tests
 
@@ -64,7 +60,7 @@ To execute the entire test suite in local development,
 
 2. use `grunt webdriver:test`.  This executes all features in the [`./test/features/*.feature`]  directory with a Spec reporter by default and references the `suite.yourSpecific.conf.js` file. Refer to the ./test/config of cucumber-bdd
 
-Note: while running mobile tests please do the requisite Appium set up before you start execution. Refer [Appium](http://appium.io/getting-started.html?lang=en) for set up
+Note: while running mobile tests please do the requisite Appium setup before you start execution. For hassle free Appium setup on OSX refer [appium-setup-made-easy-OSX](https://github.com/amiya-pattnaik/appium-setup-made-easy-OSX) OR refer [Appium Docs](http://appium.io/getting-started.html?lang=en)
 
 ## Config Files
 
