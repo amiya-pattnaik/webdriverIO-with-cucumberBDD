@@ -155,11 +155,11 @@ db.execute(config, sqlQuery, callback);
 
 for more information, please visit `node-any-jdbc` module which can be [found here](https://www.npmjs.com/package/node-any-jdbc)
 
-Note: `node-any-jdbc` is already packaged under this project. You can start using it right away. You can also find sample examples under /util-examples/
+Note: `node-any-jdbc` is already packaged under this project. You can start using it right away. You can also find sample examples under /util-examples/database-example.js
 
 ## Common utilities
 
-Refer to the common Javascript functions that provides clean, performant methods for manipulating objects, collections, MS-Excel utilities, DataBase utilities etc. Few sample code can be found in ./util-examples/
+Refer to the common Javascript functions that provides clean, performant methods for manipulating objects, collections, MS-Excel utilities, DataBase utilities etc. Few sample code can be found in /util-examples/
 
 Use [Underscore.js](http://underscorejs.org/) already bundled inside the framework which provides over 100 functions that support both your favorite workaday functional helpers: map, filter, invoke — as well as more specialized goodies: function binding, javascript templating, creating quick indexes, deep equality testing, and so on.
 
