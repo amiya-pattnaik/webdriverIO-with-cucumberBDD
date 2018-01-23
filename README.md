@@ -68,7 +68,7 @@ Note: Before running mobile tests, perform the requisite Appium setup. For hassl
 
 ### Config Files
 
-WebdriverIO uses configuration files to setup and execute tests in specific ways.  The configuration is fully customizable, and different functions can be invoked before, during and after each test or test suite.  Config files are found in the `/test/config/` directory and all end with `*.conf.js`.  These can be called via the the cli
+WebdriverIO uses configuration files to setup and execute tests in specific ways.  The configuration is fully customizable, and different functions can be invoked before, during and after each test or test suite.  Config files can be found in the `/test/config/` directory and all end with `*.conf.js`.  These can be called via the the cli
 
 ### Reporters
 
@@ -104,7 +104,7 @@ The JSON reporter is especially versatile. Since it produces a literal in a key 
 
 You can write test either by using Cucumber BDD framework or Jasmine BDD framework. You can choose javascript based design pattern or ES6 based. This project is ES6 friendly (via babel-register)
 
-For complete WebdriverIO API](http://webdriver.io/api.html) methods to write your automation.
+Refer complete [WebdriverIO API](http://webdriver.io/api.html) methods to write your automation tests.
 
 ##### Using Cucumber JavaScript framework
 
@@ -151,7 +151,7 @@ It is preferable to separate page objects into individual files that end with `.
 A relational database is, simply, a database that stores related information across multiple tables and allows you to query information in more than one table at the same time. Your application under test displays data from these database. So when you are actually performing automation testing it is very likely that you need to verify the data between actual (which you got it from browser) Vs expected (which you will get it from the database by executing SQL statements on database). This can be done by below statements in your code.
 
 var  db   = require('node-any-jdbc');
-db.execute(config, sqlQuery, callback);
+db.execute(dbconfig, sqlQuery, callback);
 
 for more information, please visit `node-any-jdbc` module which can be [found here](https://www.npmjs.com/package/node-any-jdbc)
 
