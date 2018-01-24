@@ -58,9 +58,10 @@ To take full advantage of the command line and use grunt tasks you will need to 
 ### Run Some Sample Tests
 
 To execute the entire test suite in local development, you can use any one of the options mentioned below
+
 Option 1: `npm run tests`
 
-Option 2: use `grunt webdriver:test`.  This executes all features in the [`./test/features/*.feature`]  directory with a Spec reporter by default and references the `suite.yourSpecific.conf.js` file. Refer to the ./test/config of cucumber-bdd
+Option 2: `grunt webdriver:test`.  This executes all features in the [`./test/features/*.feature`]  directory with a Spec reporter by default and references the `suite.yourSpecific.conf.js` file. Refer to the ./test/config of cucumber-bdd
 
 To execute tests on mobile device use : `npm run tests-mobile`
 
