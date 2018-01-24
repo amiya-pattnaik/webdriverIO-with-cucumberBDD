@@ -57,12 +57,12 @@ To take full advantage of the command line and use grunt tasks you will need to 
 
 ### Run Some Sample Tests
 
-To execute the entire test suite in local development,
-1. `npm run tests`
-          or  
-`npm run tests-mobile`
+To execute the entire test suite in local development, you can use any one of the options mentioned below
+Option 1: `npm run tests`
 
-2. use `grunt webdriver:test`.  This executes all features in the [`./test/features/*.feature`]  directory with a Spec reporter by default and references the `suite.yourSpecific.conf.js` file. Refer to the ./test/config of cucumber-bdd
+Option 2: use `grunt webdriver:test`.  This executes all features in the [`./test/features/*.feature`]  directory with a Spec reporter by default and references the `suite.yourSpecific.conf.js` file. Refer to the ./test/config of cucumber-bdd
+
+To execute tests on mobile device use : `npm run tests-mobile`
 
 Note: Before running mobile tests, perform the requisite Appium setup. For hassle free Appium setup on OSX refer [appium-setup-made-easy-OSX](https://github.com/amiya-pattnaik/appium-setup-made-easy-OSX) OR refer [Appium Docs](http://appium.io/getting-started.html?lang=en)
 
@@ -111,7 +111,7 @@ Refer complete [WebdriverIO API](http://webdriver.io/api.html) methods to write 
 Tests are written in the Cucumber framework using the Gherkin Syntax. More about Gherkin & Cucumber can be found at https://cucumber.io/docs/reference
 
 Tests are place in `*.feature` files in the `/test/features/` directory. A typical test will look similar to this:
-
+```
 Feature: Performing a Yahoo Search
 
     As a user on the Yahoo search page
@@ -135,6 +135,8 @@ Feature: Performing a Yahoo Search
         Examples:
         |searchItem|
         |"Selenium Webdriver"|
+
+```
 
 ### The Page Object Design Pattern
 
