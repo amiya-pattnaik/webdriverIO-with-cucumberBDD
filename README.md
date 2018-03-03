@@ -188,7 +188,7 @@ cogfig = {
 var sql = 'SELECT * FROM emp_info where emp_id = "1001"';
 db.execute(cogfig, sql, function(results){
   console.log(results);
-  //then do what ever validation you to do with results
+  //then do what ever validation you want to do with results
 });
 
 For trouble shooting and more information, please visit `node-any-jdbc` module which can be [found here](https://www.npmjs.com/package/node-any-jdbc)
