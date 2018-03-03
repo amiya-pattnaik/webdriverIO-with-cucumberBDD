@@ -71,7 +71,7 @@
   },
   "babel": {
     "presets": [
-      "env"
-    ]
+        ["env", { "targets": {"node": "current"}}]
+      ]
   }
 }
