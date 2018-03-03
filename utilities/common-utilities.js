@@ -312,14 +312,14 @@ module.exports = {
   /****************************************************************************************/
   multiSelector : function (selectorList) {
     for (var lookSelector in selectorList){
-      var elementExist = browser.element(selectorList[lookSelector]);
-      //console.log(elementExist);
-      if (elementExist.state == "success"){
-        //console.log("the right selector is: "+elementExist.selector);
-        return elementExist.selector;
-      } else {console.log("selector does not exists: "+elementExist.selector);}
+      var elem = browser.element(selectorList[lookSelector]);
+      if (elem.type != "NoSuchElement" && elem.state != "failure"){
+        //console.log("the right selector is: "+elem.selector);
+        return elem.selector;
+      } else {console.log("this selector does not exists: "+elem.selector);}
     }
   },
+  
 /***************************************************************************************/
   //method to generate timestamp in the format: mm/dd/yy hh:mi:ss
 /***************************************************************************************/
@@ -353,41 +353,6 @@ module.exports = {
         expect(false).toBe(true);
         throw new Error('Timed out while waiting for control to load : ' + e);
       }
-    },
-
-    /***************************************************************************************/
-    /**
-     * function db_execute(config, sqlQuery, callback)
-     * execute a SQL query on any RDBMS and gives query results
-     * @param {*} config - db connection strings
-     * @param {*} sqlQuery - sql queries to execute
-     * @param {callback} callback function that contains query results and gets called when the command finishes
-     **/
-    /****************************************************************************************/
-
-    db_execute : function (config, sqlQuery, callback){
-      // register the JDBC driver
-      anyDBJDBC.registerConfig(config);
-
-      var connection = anyDB.createConnection(config.url, function (err){
-        if(err){
-          return console.error('database connection error : ', err);
-        }
-        //execute any query
-        connection.query(sqlQuery, function (err, rows) {
-          //console.log('I am in:');
-          connection.end(function (error) {});
-          if (err) {
-            return console.error('query execute error : ', err);
-          }
-          return callback(rows);
-        }); //end of exec block
-      });//end of connect block
-    },
-
-    //just a demo function
-    sum : function (a, b) {
-      return a+b;
     },
 
 } // end of module
