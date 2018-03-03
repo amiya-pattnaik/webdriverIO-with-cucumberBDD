@@ -26,11 +26,6 @@ utl.excel_getAllSheetData(__dirname+'/sample.xlsx', function(results){
   //then do what ever validation you to do withe results
 });
 
-var sqlQuery = 'SELECT * FROM emp_info';
-db.execute(dbc.mysql, sqlQuery, function(results){
-  //console.log(results);
-  //then do what ever validation you to do withe results
-});
 
 var JSONObject = [{"animals": {name:"cat", name:"dog", name:"dog"}}];
 
