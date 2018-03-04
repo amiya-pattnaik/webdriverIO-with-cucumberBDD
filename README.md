@@ -59,11 +59,11 @@ To take full advantage of the command line and use grunt tasks you will need to 
 
 To execute the entire test suite in local development, you can use any one of the options mentioned below
 
-Option 1: `npm run tests`
+Option 1: `npm run test`
 
 Option 2: `grunt webdriver:test`.  This executes all features in the [`./test/features/*.feature`]  directory with a Spec reporter by default and references the `suite.yourSpecific.conf.js` file. Refer to the ./test/config of cucumber-bdd
 
-To execute tests on mobile device use : `npm run tests-mobile`
+To execute tests on mobile device use : `npm run test-mobile`
 
 Note: Before running mobile tests, perform the requisite Appium setup. For hassle free Appium setup on OSX refer [appium-setup-made-easy-OSX](https://github.com/amiya-pattnaik/appium-setup-made-easy-OSX) OR refer [Appium Docs](http://appium.io/getting-started.html?lang=en)
 
@@ -187,13 +187,13 @@ cogfig = {
 
 var sql = 'SELECT * FROM emp_info where emp_id = "1001"';
 db.execute(cogfig, sql, function(results){
-  console.log(results);
+  //console.log(results);
   //then do what ever validation you want to do with results
 });
 
-For trouble shooting and more information, please visit `node-any-jdbc` module which can be [found here](https://www.npmjs.com/package/node-any-jdbc)
+For trouble shooting and more information, please visit `node-any-jdbc` module which can be found [here](https://www.npmjs.com/package/node-any-jdbc)
 
-Note: `node-any-jdbc` is NOT packaged under this project. If you need, you can install it `npm install node-any-jdbc --save` and start using it right away.
+Note: `node-any-jdbc` is NOT packaged under this project. If you need, you can install it as a separate npm module `npm install node-any-jdbc --save` and start using it right away.
 You can also find sample examples under /util-examples/database-example.js
 
 ```
