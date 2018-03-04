@@ -191,9 +191,9 @@ db.execute(cogfig, sql, function(results){
   //then do what ever validation you want to do with results
 });
 
+```
 For trouble shooting and more information, please visit `node-any-jdbc` module which can be found [here](https://www.npmjs.com/package/node-any-jdbc)
 
-```
 Note: `node-any-jdbc` is NOT packaged under this project. If you need, you can install it as a separate npm module `npm install node-any-jdbc --save` and start using it right away.
 You can also find sample examples under /util-examples/database-example.js
 
