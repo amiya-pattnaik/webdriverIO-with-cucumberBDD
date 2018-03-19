@@ -22,13 +22,13 @@ Now navigate to the framework's package.json folder and run `npm install` to gra
 
 To take full advantage of the command line and use grunt tasks you will need to make sure that you have added `node_modules/.bin` to your `$PATH`.  Otherwise you will need to install the following globally:
 
-  npm install -g  grunt-cli
+  `npm install -g  grunt-cli`
 
 ### Selenium, Appium
 
   To run your test You must have selenium / Appium server up and running to execute any WebdriverIO tests, or it will fail fast with an error. There are two ways you can run selenium.
 
-  Once all the node dependency modules are installed (through `npm install`) then for development, you can run  `npm run selenium-postinstall` followed by `npm run selenium-start`.  That's all there is to it.!. Please note that this step is only one time activity at the initial framework set up. Alternatively you can also use below options to start the selenium server
+  Once all the node dependency modules are installed (through `npm install`) then for development, you can run  `npm run selenium-postinstall` followed by `npm run selenium-start` if you wish to start it manually else you can use `services: ['selenium-standalone'],` in .conf.js to start it automatically which has been added as part of this project. That's all there is to it.!. Please note that this step is only one time activity at the initial framework set up. Alternatively you can also use below options to start the selenium server.
 
   1. Install Selenium (selenium-standalone) through NPM (this is the recommended way to install) as you can use it as a services in your framework without worrying to start the selenium server manually. Please note that you follow this below step if `selenium-standalone` package in not been installed through package manager. If you are behind a specific proxy, then in that case you need to set environment variables:
 
@@ -51,9 +51,9 @@ To take full advantage of the command line and use grunt tasks you will need to 
   OR
 
   2. Download the latest selenium standalone server version: and then for example
-    $ java -jar selenium-server-standalone-3.4.0.jar. This option is require if you have not done the step No-2. Else ignore it. this is the other way of doing.
+    $ java -jar selenium-server-standalone-3.4.0.jar. This option is require if you have not done the step No-1. Else ignore it. this is the other way of doing.
 
-  Note: While installing through sudo command - you need to provide System admin password. On windows dont use `sudo`
+  Note: While installing through sudo command - you need to provide System admin password. On windows don't use `sudo`
 
 ### Run Some Sample Tests
 

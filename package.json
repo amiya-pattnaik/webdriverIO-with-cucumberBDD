@@ -1,6 +1,6 @@
 {
   "name": "webdriverIO-with-cucumberBDD",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "WebDriver bindings for Node.js with Cucumber",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "selenium-start": "node_modules/.bin/selenium-standalone start",
     "test": "node node_modules/webdriverio/bin/wdio ./test/config/suite.cucumber.conf.js",
     "test-mobile": "node node_modules/webdriverio/bin/wdio ./test/config/suite.appium.conf.js",
-    "allure-report": "node_modules/.bin/allure generate ./test/reports/allure-results/ && allure report",
+    "allure-report": "node_modules/.bin/allure generate ./test/reports/allure-results -c && allure open",
     "junit-report": "node_modules/.bin/junit-viewer --results=./test/reports/junit-results --save=junit-results.html && open junit-results.html"
   },
   "keywords": [
@@ -25,6 +25,7 @@
   "author": "Amiya Pattanaik <pattnaik_amiya@yahoo.com>",
   "license": "ISC",
   "dependencies": {
+    "allure-commandline": "^2.5.0",
     "appium": "^1.6.3",
     "assert": "^1.4.1",
     "babel-preset-env": "^1.6.0",
@@ -40,7 +41,7 @@
     "node-excel-to-json": "0.0.3",
     "node-inspector": "^1.1.1",
     "underscore": "^1.8.3",
-    "wdio-allure-reporter": "^0.0.2",
+    "wdio-allure-reporter": "^0.6.0",
     "wdio-dot-reporter": "0.0.5",
     "wdio-json-reporter": "^0.1.1",
     "wdio-junit-reporter": "0.0.2",
@@ -48,8 +49,6 @@
     "webdriverio": "^4.8.0"
   },
   "devDependencies": {
-    "allure-commandline": "^1.5.0",
-    "allure-js-commons": "^1.2.1",
     "eslint": "^1.10.3",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",

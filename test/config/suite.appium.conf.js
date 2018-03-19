@@ -101,8 +101,12 @@ exports.config = {
 
     reporterOptions: {
         junit:  {outputDir: './test/reports/junit-results/'},
-        allure: {outputDir: './test/reports/allure-results/'},
-        json:   {outputDir: './test/reports/json-results/'}
+        json:   {outputDir: './test/reports/json-results/'},
+        allure: {
+          outputDir:   './test/reports/allure-results/',
+          disableWebdriverStepsReporting: false,
+          useCucumberStepReporter: false,
+        },
     },
 
     // If you are using Cucumber you need to specify the location of your step definitions.

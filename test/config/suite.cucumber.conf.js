@@ -126,15 +126,20 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     //
-    //services: ['selenium-standalone', 'phantomjs'],
+    services: ['selenium-standalone'],
+    //services: ['selenium-standalone', 'phantomjs', 'appium'],
     //
     framework: 'cucumber',
     reporters: ['spec', 'junit','allure', 'json'],
 
     reporterOptions: {
         junit:  {outputDir: './test/reports/junit-results/'},
-        allure: {outputDir: './test/reports/allure-results/'},
-        json:   {outputDir: './test/reports/json-results/'}
+        json:   {outputDir: './test/reports/json-results/'},
+        allure: {
+          outputDir:   './test/reports/allure-results/',
+          disableWebdriverStepsReporting: false,
+          useCucumberStepReporter: false,
+        },
     },
 
     // If you are using Cucumber you need to specify the location of your step definitions.
