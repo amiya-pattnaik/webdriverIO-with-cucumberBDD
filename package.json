@@ -66,7 +66,7 @@
     "wdio-phantomjs-service": "^0.2.2",
     "wdio-sauce-service": "^0.2.2",
     "wdio-screenshot": "^0.5.0",
-    "wdio-selenium-standalone-service": "0.0.4"
+    "wdio-selenium-standalone-service": "^0.0.10"
   },
   "babel": {
     "presets": [
