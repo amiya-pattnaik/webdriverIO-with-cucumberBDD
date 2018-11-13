@@ -33,16 +33,14 @@ To take full advantage of the command line and use grunt tasks you will need to 
   1. Install Selenium (selenium-standalone) through NPM (this is the recommended way to install) as you can use it as a services in your framework without worrying to start the selenium server manually. Please note that you follow this below step if `selenium-standalone` package in not been installed through package manager. If you are behind a specific proxy, then in that case you need to set environment variables:
 
   - On OSX:
-    - NODE_TLS_REJECT_UNAUTHORIZED=0 selenium-standalone install
-    - NODE_TLS_REJECT_UNAUTHORIZED=0 selenium-standalone start
+    - NODE_TLS_REJECT_UNAUTHORIZED=0
+
  - On Windows:
     - setx NODE_TLS_REJECT_UNAUTHORIZED 0
 
 ```
   sudo npm install selenium-standalone@latest -g
-
   sudo selenium-standalone install
-
   selenium-standalone start
 ```
   OR
