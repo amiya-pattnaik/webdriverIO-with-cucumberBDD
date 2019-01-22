@@ -3,10 +3,10 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         webdriver: {
-            tests: {
+            test: {
                 configFile: './test/config/suite.cucumber.conf.js'
             },
-            tests-mobile: {
+            test-mobile: {
                 configFile: './test/config/suite.appium.conf.js'
             },
         },
@@ -14,6 +14,6 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-cucumberjs');
     grunt.loadNpmTasks('grunt-webdriver');
-    grunt.registerTask('default', ['webdriver:tests']);
-    //grunt.registerTask('default', ['webdriver:tests-mobile']);
+    grunt.registerTask('default', ['webdriver:test']);
+    //grunt.registerTask('default', ['webdriver:test-mobile']);
 };
