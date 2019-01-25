@@ -233,6 +233,33 @@ For trouble shooting and more information, please visit `node-any-jdbc` module w
 Note: `node-any-jdbc` is NOT packaged under this project. If you need, you can install it as a separate npm module `npm install node-any-jdbc --save` and start using it right away.
 You can also find sample examples under /util-examples/database-example.js
 
+### Working with Excel File
+
+You can use `MS-Excel / OpenOffice` Excel files and store your test data, expected data in an excel sheet. you can keep any number of excel sheets you want and use below common methods to pull data from your sheet to be use as part of testing.  Please note it only support `.xlsx` file format. For more information refer to the `common-utilities.js` and `util-examples`
+
+```
+//example of pulling data from MS-Excel
+
+var  utl  = require('../utilities/common-utilities.js');
+utl.excel_getTableRow(__dirname+'/sample.xlsx', 'info', 'emp_id', '101', function(results){
+  // returns only one row based on the condition
+  //console.log(results);
+  //console.log(results.emp_id);
+});
+
+utl.excel_getTableRows(__dirname+'/sample.xlsx', 'address', function(results){
+  // returns all rows of the specified sheet
+  //console.log(results[1]);
+  //then do what ever validation you to do withe results
+});
+
+utl.excel_getAllSheetData(__dirname+'/sample.xlsx', function(results){
+  // returns all sheets data of a excel file
+  //console.log(results);
+  //then do what ever validation you to do withe results
+});
+
+```
 
 ### Common utilities
 
