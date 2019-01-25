@@ -144,7 +144,46 @@ You can also place reusable functions or logic inside of these pages and call th
 
 An object called `Page` will be created with the prototype model or by ES6 class pattern.  This ensures that every instance of a page object is exported as a stateless construct. Any any changes to that state are handled in the browser, rather than on the server.
 
-It is preferable to separate page objects into individual files that end with `.page.js`.  These will require the basic `page.js` prototype construct / abstract class and create new objects for each individual page. For more information on the implementation, refer to the `/test/pageobjects` directory.
+It is preferable to separate page objects into individual files that end with `.page.js`.  These will require the basic `page.js` prototype construct / abstract class and create new objects for each individual page.
+
+For more information on the implementation of `Page Object Design Pattern`, refer to the `/test/pageobjects` directory. A typical page class using ES6 syntax will look similar to this:
+
+💡 If you want to use ES5 syntax, refer to the sample.page.js under util-examples.
+
+```
+import Page from './page';
+class LoginPage extends Page {
+
+    /**
+    * define elements
+    */
+
+    get usernameInput()   { return $('//*[@name="username"]'); }
+    get passwordInput()   { return $('//*[@name="password"]'); }
+    get rememberMe ()     { return $('//*[@id="remember-me"]'); }
+    get loginButton()     { return $('//button[contains(., "Login")]'); }
+
+    /**
+     * define or overwrite page methods
+     */
+    open () {
+        super.open('login')
+        //browser.pause(3000);
+    }
+    /**
+     * your page specific methods
+     */
+    login (username, password) {
+      this.usernameInput.setValue(username);
+      this.passwordInput.setValue(password);
+      this.rememberMe.click();
+      this.loginButton.click();
+    }
+}
+
+export default new LoginPage()
+
+```
 
 ### Using multi selector option to query element
 
