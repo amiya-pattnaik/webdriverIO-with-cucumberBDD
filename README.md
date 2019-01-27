@@ -1,7 +1,7 @@
 
-### WebdriverIO boilerplate code with Cucumber BDD
+### WebdriverIO-v4 boilerplate code with Cucumber BDD
 
-This repository contains a collection of sample webdriverIO (Selenium - Node.js/JavaScript) projects and libraries that demonstrate how to use the tool and develop automation script using the Cucumber (v 3.0.0) BDD framework. It support ES5 to ES8 (via babel-register) and uses Grunt to manage tasks, provides utilities to read data from MS-Excel, executes SQL statements to any database for end to end testing. It generate Spec, JUNIT, Allure, JSON reporters as well.
+This repository contains a collection of sample webdriverIO-v4 (Selenium - Node.js/JavaScript) projects and libraries that demonstrate how to use the tool and develop automation script using the Cucumber (v 3.x) BDD framework. It support ES5 to ES8 (via babel-register) and uses Grunt to manage tasks, provides utilities to read data from MS-Excel, executes SQL statements to any database for end to end testing. It generate Spec, JUNIT, Allure, JSON reporters as well.
 
 ### Installation
 
@@ -102,7 +102,7 @@ The JSON reporter is especially versatile. Since it produces a literal in a key 
 
 You can write test by using Cucumber BDD framework. You can choose javascript based design pattern or ES6 based. This project is ES6 friendly (via babel-register)
 
-Refer complete [WebdriverIO API](http://webdriver.io/api.html) methods to write your automation tests.
+Refer complete [v4.Webdriver.IO API](http://v4.webdriver.io/api.html) methods to write your automation tests.
 
 ##### Using Cucumber JavaScript framework
 
@@ -151,33 +151,35 @@ For more information on the implementation of `Page Object Design Pattern`, refe
 💡 If you want to use ES5 syntax, refer to the sample.page.js under util-examples.
 
 ```
-import Page from './page';
 class LoginPage extends Page {
 
     /**
     * define elements
     */
 
-    get usernameInput()   { return $('//*[@name="username"]'); }
-    get passwordInput()   { return $('//*[@name="password"]'); }
-    get rememberMe ()     { return $('//*[@id="remember-me"]'); }
-    get loginButton()     { return $('//button[contains(., "Login")]'); }
+    get usernameInput()   { return browser.element('//*[@name="username"]'); }
+    get passwordInput()   { return browser.element('//*[@name="password"]'); }
+    get rememberMe ()     { return browser.element('//span[contains(., "Remember Me")]'); }
+    get loginButton()     { return browser.element('//button[contains(., "Login")]'); }
 
     /**
      * define or overwrite page methods
      */
+
     open () {
-        super.open('login')
-        //browser.pause(3000);
+        super.open('http://www.phptravels.net/login');
+        //browser.pause(1000);
     }
     /**
      * your page specific methods
      */
+
     login (username, password) {
       this.usernameInput.setValue(username);
       this.passwordInput.setValue(password);
       this.rememberMe.click();
       this.loginButton.click();
+      //browser.pause(2000);
     }
 }
 
