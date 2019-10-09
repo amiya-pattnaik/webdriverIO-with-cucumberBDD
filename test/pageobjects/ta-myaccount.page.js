@@ -6,7 +6,7 @@ class MyAccount extends Page {
     * define elements
     */
 
-    get accountMessage () { return browser.element('//div/h3[contains(., "Hi, Johny Smith")]'); }
+    get accountMessage () { return $('//div/h3[contains(., "Hi, Demo User")]'); }
 
     /**
      * define or overwrite page methods
@@ -17,8 +17,8 @@ class MyAccount extends Page {
     }
 
     waitForAccountPageToLoad () {
-      if(!this.accountMessage.isVisible()){
-        this.accountMessage.waitForVisible(10000);
+      if(!this.accountMessage.isDisplayed()){
+        this.accountMessage.waitForDisplayed(5000);
       }
     }
     getUserInfo (){

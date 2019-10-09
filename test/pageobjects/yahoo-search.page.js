@@ -5,10 +5,11 @@ class YahooPage extends Page  {
   /**
   * define elements
   */
+  //get usernameInput()   { return $('//*[@name="username"]'); }
 
-  get searchInput()   { return browser.element('#yschsp'); }
-  get searchButton()  { return browser.element('//div[@class="mag-glass"]'); }
-  get resultsList()   { return browser.element('#results'); }
+  get searchInput()   { return $('#yschsp'); }
+  get searchButton()  { return $('//input[@class="sbb"]'); }
+  get resultsList()   { return $('#results'); }
 
   /**
    * define or overwrite page methods
@@ -20,16 +21,17 @@ class YahooPage extends Page  {
   }
 
   enterText (item) {
-    this.searchInput.clearElement();
+    this.searchInput.clearValue();
     this.searchInput.setValue(item);
+    browser.pause(1000);
   }
 
   search () {
     this.searchButton.click();
   }
   isSearched () {
-    this.resultsList.waitForVisible(1000);
-    return this.resultsList.isVisible();
+    this.resultsList.waitForDisplayed(1000);
+    return this.resultsList.isDisplayed();
   }
 }
 

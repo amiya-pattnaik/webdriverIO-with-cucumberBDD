@@ -1,7 +1,8 @@
-
+//import { Given, When, Then } from 'cucumber';
+import myAccount from '../pageobjects/ta-myaccount.page';
 import { defineSupportCode } from 'cucumber';
 import yahooPage from '../pageobjects/yahoo-search.page';
-import myAccount from '../pageobjects/ta-myaccount.page';
+
 
 defineSupportCode(function({ Then }) {
   // *** belongs to Yahoo serch feature

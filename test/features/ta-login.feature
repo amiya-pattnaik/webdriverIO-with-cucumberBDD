@@ -10,9 +10,8 @@ Feature: Performing a login
 
     Scenario Outline: Performing login operation with passing test data as data table
         When I login with username and password <user> <password> into the text box
-        Then I should see the message "Hi, Johny Smith" on my account page
+        Then I should see the message "Hi, Demo User" on my account page
 
         Examples:
         |user| |password|
         |"user@phptravels.com"| |"demouser"|
-        

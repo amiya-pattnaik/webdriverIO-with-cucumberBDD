@@ -117,7 +117,8 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", then the base url gets prepended.
-    baseUrl: 'http://localhost:8080',
+    //baseUrl: 'http://localhost:8080',
+    baseUrl: 'http://www.phptravels.net',
     waitforTimeout: 90000,            // Default timeout for all waitFor* commands.
     connectionRetryTimeout: 90000,    // Default timeout in milliseconds for request  if Selenium Grid doesn't send response
     connectionRetryCount: 3,          // Default request retries count
@@ -126,27 +127,36 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     //
+    reporters: [
+      'spec',
+      ['junit', {
+          outputDir: './test/reports/junit-results/',
+          outputFileFormat: function(opts) { // optional
+              return `results-${opts.cid}.${opts.capabilities}.xml`
+          }
+        }
+      ],
+
+      ['allure', {
+          outputDir: './test/reports/allure-results/',
+          disableWebdriverStepsReporting: true,
+          disableWebdriverScreenshotsReporting: false,
+        }
+      ],
+    ],
+
     services: ['selenium-standalone'],
     //services: ['selenium-standalone', 'phantomjs', 'appium'],
     //
     framework: 'cucumber',
-    reporters: ['spec', 'junit','allure', 'json'],
-
-    reporterOptions: {
-        junit:  {outputDir: './test/reports/junit-results/'},
-        json:   {outputDir: './test/reports/json-results/'},
-        allure: {
-          outputDir:   './test/reports/allure-results/',
-          disableWebdriverStepsReporting: false,
-          useCucumberStepReporter: false,
-        },
-    },
 
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
+        requireModule: ['@babel/register'],
         require: ['./test/stepDefinitions/given.js', './test/stepDefinitions/when.js', './test/stepDefinitions/then.js'],   // <string[]> (file/dir) require files before executing features
         backtrace: true,    // <boolean> show full backtrace for errors
-        compiler: ['js:babel-core/register'], // <string[]> filetype:compiler used for processing required features
+        //compiler: ['js:babel-core/register'], // <string[]> filetype:compiler used for processing required features
+        compiler: [], // <string[]> filetype:compiler used for processing required features
         failAmbiguousDefinitions: true,       // <boolean< Treat ambiguous definitions as errors
         dryRun: false,      // <boolean> invoke formatters without executing steps
         failFast: false,    // <boolean> abort the run on first failure

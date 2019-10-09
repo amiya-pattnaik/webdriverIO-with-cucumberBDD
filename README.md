@@ -1,11 +1,13 @@
 
-### WebdriverIO-v4 boilerplate code with Cucumber BDD
+### WebdriverIO-v5 boilerplate code with Cucumber BDD
 
-This repository contains a collection of sample webdriverIO-v4 (Selenium - Node.js/JavaScript) projects and libraries that demonstrate how to use the tool and develop automation script using the Cucumber (v 3.x) BDD framework. It support ES5 to ES8 (via babel-register) and uses Grunt to manage tasks, provides utilities to read data from MS-Excel, executes SQL statements to any database for end to end testing. It generate Spec, JUNIT, Allure, JSON reporters as well.
+This repository contains a collection of sample webdriverIO-v5 (Selenium - Node.js/JavaScript) projects and libraries that demonstrate how to use the tool and develop automation script using the Cucumber (v 3.x) BDD framework. It support ES5 to ES8 (via babel-register) and uses Grunt to manage tasks, provides utilities to read data from MS-Excel, executes SQL statements to any database for end to end testing. It generate Spec, JUNIT, Allure, JSON reporters as well.
+
+💡 If you need the wdio-v4 boilerplate project, please take the code from v4 branch: click [here](https://github.com/amiya-pattnaik/webdriverIO-with-cucumberBDD/tree/wdio-v4)
 
 ### Installation
 
-This project is tested on ***Node v6.10.0 to v8.9.0***.  While earlier versions of node may be compatible, they have not been tested or verified.
+This project is tested on ***Node v8.10.0*** and Above.  While earlier versions of node may be compatible, they have not been tested or verified.
 
 `JDK 1.8:` Install JDK 1.8+ and make sure class path is set properly. JAVA is require to start `Selenium Server` nothing else.
 
@@ -102,7 +104,7 @@ The JSON reporter is especially versatile. Since it produces a literal in a key 
 
 You can write test by using Cucumber BDD framework. You can choose javascript based design pattern or ES6 based. This project is ES6 friendly (via babel-register)
 
-Refer complete [v4.Webdriver.IO API](http://v4.webdriver.io/api.html) methods to write your automation tests.
+Refer complete [v5.Webdriver.IO API](https://webdriver.io/docs/api.html) methods to write your automation tests.
 
 ##### Using Cucumber JavaScript framework
 
@@ -157,29 +159,33 @@ class LoginPage extends Page {
     * define elements
     */
 
-    get usernameInput()   { return browser.element('//*[@name="username"]'); }
-    get passwordInput()   { return browser.element('//*[@name="password"]'); }
-    get rememberMe ()     { return browser.element('//span[contains(., "Remember Me")]'); }
-    get loginButton()     { return browser.element('//button[contains(., "Login")]'); }
+    get usernameInput()   { return $('//*[@name="username"]'); }
+    get passwordInput()   { return $('//*[@name="password"]'); }
+    get loginButton()     { return $('//button[contains(., "Login")]'); }
+    get headerImage()     { return $('//img[@alt=\"Login\"]'); }
 
     /**
      * define or overwrite page methods
      */
-
     open () {
-        super.open('http://www.phptravels.net/login');
-        //browser.pause(1000);
+        super.open('login')       //this will append `login` to the baseUrl to form complete URL
+        //browser.pause(3000);
     }
     /**
      * your page specific methods
      */
 
+    waitForloginPageToLoad () {
+      if(!this.headerImage.isDisplayed()){
+        this.headerImage.waitForDisplayed(10000);
+      }
+    }
+
     login (username, password) {
+      //this.waitForloginPageToLoad();
       this.usernameInput.setValue(username);
       this.passwordInput.setValue(password);
-      this.rememberMe.click();
       this.loginButton.click();
-      //browser.pause(2000);
     }
 }
 
@@ -187,23 +193,6 @@ export default new LoginPage()
 
 ```
 
-### Using multi selector option to query element
-
-It defines one or more selectors/tags to uniquely identify the object at runtime. You can query any element with more than one selector at a time. The benefit of using multiSelector() method is, during run time, if one selector is failed, still you can identify that element with another alternative selector on and on... which makes your test script robust.
-
-*method : multiSelector(selectorList)
-* @param {selectorList} - an arraylist which contains different alternative selector
-* for example - ["[href='/guide.html1']", "//*[@id='userid']", "[@class='myclassname']"];
-
-```
-import utl   from '/utilities/common-utilities';
-
-browser.element(utl.multiSelector(['//*[@id="userid"]', '//*[@name="userAlias"]', "[ng-model='$ctrl.signInData[field.name]']"]));
-
-// or inside your page class you can use like ...
-//get usernameInput()  { return browser.element(utl.multiSelector(['//*[@id="userid"]', '//*[@name="userAlias"]', "[ng-model='$ctrl.signInData[field.name]']"])); }
-
-```
 ### Working with DataBase
 
 A relational database is, simply, a database that stores related information across multiple tables and allows you to query information in more than one table at the same time. Your application under test displays data from these database. So when you are actually performing automation testing it is very likely that you need to verify the data between actual (which you got it from browser) Vs expected (which you will get it from the database by executing SQL statements on database). This can be done by below statements in your code.

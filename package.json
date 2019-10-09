@@ -1,15 +1,15 @@
 {
   "name": "webdriverIO-with-cucumberBDD",
-  "version": "1.1.5",
-  "description": "WebDriver bindings for Node.js with Cucumber",
+  "version": "1.1.6",
+  "description": "WebDriver-v5 bindings for Node.js with Cucumber",
   "main": "index.js",
   "scripts": {
     "node-inspector": "node-inspector --debug-port 5859 --no-preload",
     "selenium-postinstall": "node node_modules/.bin/selenium-standalone install",
     "selenium-start": "node_modules/.bin/selenium-standalone start",
-    "test": "node node_modules/webdriverio/bin/wdio ./test/config/suite.cucumber.conf.js",
-    "test-mobile": "node node_modules/webdriverio/bin/wdio ./test/config/suite.appium.conf.js",
-    "allure-report": "node_modules/.bin/allure generate ./test/reports/allure-results -c && allure open",
+    "test": "node node_modules/.bin/wdio ./test/config/suite.cucumber.conf.js",
+    "test-mobile": "node node_modules/.bin/wdio ./test/config/suite.appium.conf.js",
+    "allure-report": "node_modules/.bin/allure generate ./test/reports/allure-results && allure report",
     "junit-report": "node_modules/.bin/junit-viewer --results=./test/reports/junit-results --save=junit-results.html && open junit-results.html"
   },
   "keywords": [
@@ -24,15 +24,15 @@
   ],
   "author": "Amiya Pattanaik <pattnaik_amiya@yahoo.com>",
   "license": "ISC",
+
   "dependencies": {
-    "allure-commandline": "^2.5.0",
-    "appium": "^1.6.3",
     "assert": "^1.4.1",
-    "babel-preset-env": "^1.6.0",
-    "babel-register": "^6.26.0",
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
-    "cucumber": "^3.0.0",
     "graceful-fs": "^4.1.4",
     "grunt": "^0.4.5",
     "grunt-webdriver": "^1.0.0",
@@ -41,12 +41,17 @@
     "node-excel-to-json": "0.0.3",
     "node-inspector": "^1.1.1",
     "underscore": "^1.8.3",
-    "wdio-allure-reporter": "^0.6.0",
-    "wdio-dot-reporter": "0.0.5",
-    "wdio-json-reporter": "^0.1.1",
-    "wdio-junit-reporter": "0.0.2",
-    "wdio-spec-reporter": "^0.1.2",
-    "webdriverio": "^4.8.0"
+    "@wdio/allure-reporter": "^5.11.0",
+    "@wdio/appium-service": "^5.0.0",
+    "@wdio/cli": "^5.11.0",
+    "@wdio/cucumber-framework": "^5.11.0",
+    "@wdio/dot-reporter": "^5.11.0",
+    "wdio-json-reporter": "^1.0.0",
+    "@wdio/junit-reporter": "^5.0.0",
+    "@wdio/local-runner": "^5.11.0",
+    "@wdio/spec-reporter": "^5.11.0",
+    "@wdio/sync": "^5.11.0",
+    "webdriverio": "^5.11.0"
   },
   "devDependencies": {
     "eslint": "^1.10.3",
@@ -60,17 +65,14 @@
     "grunt-cucumberjs": "^0.8.7",
     "node-uuid": "^1.4.7",
     "selenium-standalone": "^6.8.0",
-    "wdio-appium-service": "^0.2.3",
-    "wdio-browserstack-service": "^0.1.4",
-    "wdio-cucumber-framework": "^1.0.2",
+    "@wdio/browserstack-service": "^5.0.0",
     "wdio-phantomjs-service": "^0.2.2",
-    "wdio-sauce-service": "^0.2.2",
-    "wdio-screenshot": "^0.5.0",
-    "wdio-selenium-standalone-service": "^0.0.10"
+    "@wdio/sauce-service": "^5.0.0",
+    "@wdio/selenium-standalone-service": "^5.11.2"
   },
   "babel": {
     "presets": [
-        ["env", { "targets": {"node": "current"}}]
-      ]
+      [ "@babel/preset-env", { "targets": {"node": "current"} } ]
+    ]
   }
 }

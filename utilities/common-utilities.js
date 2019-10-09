@@ -5,8 +5,8 @@
 /****************************************************************************************/
 
 //var xls_json 	= require('../node_modules/node-excel-to-json');
-var anyDB     = require('../node_modules/any-db');
-var anyDBJDBC = require('../node_modules/any-db-jdbc');
+// var anyDB     = require('../node_modules/any-db');
+// var anyDBJDBC = require('../node_modules/any-db-jdbc');
 var xls_json  = require(	'../node_modules/node-excel-to-json');
 module.exports = {
 
@@ -319,7 +319,7 @@ module.exports = {
       } else {console.log("this selector does not exists: "+elem.selector);}
     }
   },
-  
+
 /***************************************************************************************/
   //method to generate timestamp in the format: mm/dd/yy hh:mi:ss
 /***************************************************************************************/

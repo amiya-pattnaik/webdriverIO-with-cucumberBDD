@@ -1,4 +1,5 @@
-import Page from './page'
+import Page from './page';
+import utl   from '../../utilities/common-utilities';
 
 class LoginPage extends Page {
 
@@ -6,36 +7,33 @@ class LoginPage extends Page {
     * define elements
     */
 
-    get usernameInput()   { return browser.element('//*[@name="username"]'); }
-    get passwordInput()   { return browser.element('//*[@name="password"]'); }
-    get rememberMe ()     { return browser.element('//span[contains(., "Remember Me")]'); }
-    get loginButton()     { return browser.element('//button[contains(., "Login")]'); }
-    get footerImage()     { return browser.element('//*[@class="foot-brand center-block img-responsive"]'); }
+    get usernameInput()   { return $('//*[@name="username"]'); }
+    get passwordInput()   { return $('//*[@name="password"]'); }
+    get loginButton()     { return $('//button[contains(., "Login")]'); }
+    get headerImage()     { return $('//img[@alt=\"Login\"]'); }
 
     /**
      * define or overwrite page methods
      */
     open () {
-        super.open('http://www.phptravels.net/login')       //this will append `login` to the baseUrl to form complete URL
-        browser.pause(1000);
+        super.open('login')       //this will append `login` to the baseUrl to form complete URL
+        //browser.pause(3000);
     }
     /**
      * your page specific methods
      */
 
     waitForloginPageToLoad () {
-      if(!this.footerImage.isVisible()){
-        this.footerImage.waitForVisible(5000);
+      if(!this.headerImage.isDisplayed()){
+        this.headerImage.waitForDisplayed(10000);
       }
     }
 
     login (username, password) {
-      this.waitForloginPageToLoad();
+      //this.waitForloginPageToLoad();
       this.usernameInput.setValue(username);
       this.passwordInput.setValue(password);
-      this.rememberMe.click();
       this.loginButton.click();
-      browser.pause(2000);
     }
 }
 

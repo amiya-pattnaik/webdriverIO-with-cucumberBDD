@@ -1,8 +1,8 @@
 
 //Sample example on how to use the library functions in your any.js file
 var  utl  = require('../utilities/common-utilities.js');
-var  dbc  = require('./db');
-var  db   = require('node-any-jdbc');
+// var  dbc  = require('./db');
+// var  db   = require('node-any-jdbc');
 
 var _ = require('lodash');
 

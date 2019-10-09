@@ -1,0 +1,60 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1570593674245' stop='1570593680238'>
+    <name>Performing a login: Performing login operation with passing test data as data table</name>
+    <title>Performing a login: Performing login operation with passing test data as data table</title>
+    <test-cases>
+        <test-case start='1570593674255' status='passed' stop='1570593679245'>
+            <name>Given I am on the phptravels page</name>
+            <title>Given I am on the phptravels page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1570593679246' status='broken' stop='1570593680233'>
+            <name>When I login with username and password "user@phptravels.com" "demouser" into the text box</name>
+            <title>When I login with username and password "user@phptravels.com" "demouser" into the text box</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>unknown error: Element &lt;button style="font-size: 16px;" type="submit" class="btn btn-action btn-lg btn-block loginbtn">...&lt;/button> is not clickable at point (639, 587). Other element would receive the click: &lt;span id="cookieconsent:desc" class="cc-message">...&lt;/span>
+                  (Session info: chrome=77.0.3865.90)
+                  (Driver info: chromedriver=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052),platform=Mac OS X 10.13.4 x86_64)</message>
+                <stack-trace>Error: unknown error: Element &lt;button style="font-size: 16px;" type="submit" class="btn btn-action btn-lg btn-block loginbtn">...&lt;/button> is not clickable at point (639, 587). Other element would receive the click: &lt;span id="cookieconsent:desc" class="cc-message">...&lt;/span>
+                  (Session info: chrome=77.0.3865.90)
+                  (Driver info: chromedriver=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052),platform=Mac OS X 10.13.4 x86_64)
+                    at endReadableNT (_stream_readable.js:1055:12)
+                    at LoginPage.click (/Users/amiyapattanaik/Desktop/automation/framework/javascript/ui-automation/webdriverIO-with-cucumberBDD/test/pageobjects/ta-login.page.js:36:24)
+                    at World.login (/Users/amiyapattanaik/Desktop/automation/framework/javascript/ui-automation/webdriverIO-with-cucumberBDD/test/stepDefinitions/when.js:20:15)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1570593680234' status='pending' stop='1570593680235'>
+            <name>Then I should see the message "Hi, Demo User" on my account page</name>
+            <title>Then I should see the message "Hi, Demo User" on my account page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

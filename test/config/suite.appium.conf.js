@@ -26,58 +26,58 @@ exports.config = {
     //
     maxInstances: 1,
 
-    // capabilities: [{
-    //     appiumVersion: '1.6.5',
-    //     automationName: 'XCUITest',
-    //     platformName: 'iOS',
-    //     //platformVersion: '9.0',
-    //     deviceName: 'iPhone Simulator',
-    //     //deviceName: 'iPhone 6s',
-    //     browserName: 'Safari',
-    //     //orientation: 'PORTRAIT',
-    //     //nativeInstrumentsLib: true,
-    //     //isolateSimDevice: true,
-    //     clearSystemFiles: true,
-    //     //commandTimeout: '7200',
-    //     //app: APP_PATH
-    // }],
-
     capabilities: [{
-        appiumVersion: '1.6.5',
-        automationName: 'Appium',
-        platformName: 'Android',
-        //platformVersion: '9.0',
-        deviceName: 'Android Emulator',
+        appiumVersion: '1.15.0',
+        automationName: 'XCUITest',
+        platformName: 'iOS',
+        platformVersion: '11.4',
+        deviceName: 'iPhone Simulator',
         //deviceName: 'iPhone 6s',
-        browserName: 'chrome',
-        // chromeOptions: {
-        //   androidPackage: 'com.android.chrome',
-        // },
-        //setDebugApp: '--persistent com.android.chrome',
-        chromeOptions: {
-          args: ['--no-managed-user-acknowledgment-check', '--no-user-gesture-required', '--oobe-force-show-screen ⊗']
-        },
+        browserName: 'Safari',
         //orientation: 'PORTRAIT',
         //nativeInstrumentsLib: true,
         //isolateSimDevice: true,
-        //clearSystemFiles: true,
+        clearSystemFiles: true,
+        //commandTimeout: '7200',
         //app: APP_PATH
-        commandTimeout: '7200',
-        noReset: false,
-        //show_on_first_run_allowed: false,
-        dontStopAppOnReset: false,
-        show_on_first_run_allowed : false,
-        show_welcome_page: false,
-        appActivity: '.MainActivity',
-        appWaitActivity: 'SplashActivity',
-        noSign: true,
-        // intentCategory: 'android.intent.category.APP_CONTACTS',
-        // intentAction: 'android.intent.action.MAIN',
     }],
+
+    // capabilities: [{
+    //     appiumVersion: '1.15.0',
+    //     automationName: 'Appium',
+    //     platformName: 'Android',
+    //     //platformVersion: '9.0',
+    //     deviceName: 'Android Emulator',
+    //     //deviceName: 'iPhone 6s',
+    //     browserName: 'chrome',
+    //     // chromeOptions: {
+    //     //   androidPackage: 'com.android.chrome',
+    //     // },
+    //     //setDebugApp: '--persistent com.android.chrome',
+    //     chromeOptions: {
+    //       args: ['--no-managed-user-acknowledgment-check', '--no-user-gesture-required', '--oobe-force-show-screen ⊗']
+    //     },
+    //     //orientation: 'PORTRAIT',
+    //     //nativeInstrumentsLib: true,
+    //     //isolateSimDevice: true,
+    //     //clearSystemFiles: true,
+    //     //app: APP_PATH
+    //     commandTimeout: '7200',
+    //     noReset: false,
+    //     //show_on_first_run_allowed: false,
+    //     dontStopAppOnReset: false,
+    //     show_on_first_run_allowed : false,
+    //     show_welcome_page: false,
+    //     appActivity: '.MainActivity',
+    //     appWaitActivity: 'SplashActivity',
+    //     noSign: true,
+    //     // intentCategory: 'android.intent.category.APP_CONTACTS',
+    //     // intentAction: 'android.intent.action.MAIN',
+    // }],
 
 
     host: '0.0.0.0',
-    port: '4723',
+    port: 4723,
     sync: true,
     logLevel: 'silent',     // Level of logging verbosity: silent | verbose | command | data | result | error
     coloredLogs: true,      // Enables colors for log output.
@@ -85,7 +85,8 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", then the base url gets prepended.
-    baseUrl: 'http://localhost',
+    //baseUrl: 'http://localhost',
+    baseUrl: 'http://www.phptravels.net',
     waitforTimeout: 90000,            // Default timeout for all waitFor* commands.
     connectionRetryTimeout: 90000,    // Default timeout in milliseconds for request  if Selenium Grid doesn't send response
     connectionRetryCount: 3,          // Default request retries count
@@ -95,25 +96,33 @@ exports.config = {
     // commands. Instead, they hook themselves up into the test process.
     //
     //services: ['selenium-standalone', 'phantomjs'],
+    services: ['appium'],
     //
     framework: 'cucumber',
-    reporters: ['spec', 'junit','allure', 'json'],
+    reporters: [
+      'spec',
+      ['junit', {
+          outputDir: './test/reports/junit-results/',
+          outputFileFormat: function(opts) { // optional
+              return `results-${opts.cid}.${opts.capabilities}.xml`
+          }
+        }
+      ],
 
-    reporterOptions: {
-        junit:  {outputDir: './test/reports/junit-results/'},
-        json:   {outputDir: './test/reports/json-results/'},
-        allure: {
-          outputDir:   './test/reports/allure-results/',
-          disableWebdriverStepsReporting: false,
-          useCucumberStepReporter: false,
-        },
-    },
+      ['allure', {
+          outputDir: './test/reports/allure-results/',
+          disableWebdriverStepsReporting: true,
+          disableWebdriverScreenshotsReporting: false,
+        }
+      ],
+    ],
 
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
+        requireModule: ['@babel/register'],
         require: ['./test/stepDefinitions/given.js', './test/stepDefinitions/when.js', './test/stepDefinitions/then.js'],   // <string[]> (file/dir) require files before executing features
         backtrace: true,    // <boolean> show full backtrace for errors
-        compiler: ['js:babel-core/register'], // <string[]> filetype:compiler used for processing required features
+        //compiler: ['js:babel-core/register'], // <string[]> filetype:compiler used for processing required features
         failAmbiguousDefinitions: true,       // <boolean< Treat ambiguous definitions as errors
         dryRun: false,      // <boolean> invoke formatters without executing steps
         failFast: false,    // <boolean> abort the run on first failure
