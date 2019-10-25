@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "node-inspector": "node-inspector --debug-port 5859 --no-preload",
-    "selenium-postinstall": "node node_modules/.bin/selenium-standalone install",
+    "selenium-postinstall": "node_modules/.bin/selenium-standalone install",
     "selenium-start": "node_modules/.bin/selenium-standalone start",
-    "test": "node node_modules/.bin/wdio ./test/config/suite.cucumber.conf.js",
+    "test": "node_modules/.bin/wdio ./test/config/suite.cucumber.conf.js",
     "test-mobile": "node node_modules/.bin/wdio ./test/config/suite.appium.conf.js",
     "allure-report": "node_modules/.bin/allure generate ./test/reports/allure-results && allure report",
     "junit-report": "node_modules/.bin/junit-viewer --results=./test/reports/junit-results --save=junit-results.html && open junit-results.html"
