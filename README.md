@@ -94,7 +94,7 @@ Allure has several other reporting tools optimized for the CI server of your cho
 
 The JUnit reporter helps you to create xml reports for your CI server. Add it to the reports array in the config file and define the directory where the xml files should get stored. webdriverIO will create an xml file for each instance under test and the filename will contain the browser and OS.
 
-To generate and view an allure report locally, run `npm run junit-report`. A typical junit/xunit report will look like this
+To generate and view an junit/xunit report locally, run `npm run junit-report`. A typical junit/xunit report will look like this
 
 ![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/junit-result.png)
 
