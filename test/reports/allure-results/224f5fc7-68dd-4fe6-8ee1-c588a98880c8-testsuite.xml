@@ -1,0 +1,49 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1573495558526' stop='1573495577070'>
+    <name>Performing a login: Performing login operation with passing test data as data table</name>
+    <title>Performing a login: Performing login operation with passing test data as data table</title>
+    <test-cases>
+        <test-case start='1573495558529' status='passed' stop='1573495570137'>
+            <name>Given I am on the phptravels page</name>
+            <title>Given I am on the phptravels page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-78.0.3904.97'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1573495570137' status='passed' stop='1573495570432'>
+            <name>When I login with username and password "user@phptravels.com" "demouser" into the text box</name>
+            <title>When I login with username and password "user@phptravels.com" "demouser" into the text box</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-78.0.3904.97'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1573495570432' status='passed' stop='1573495577068'>
+            <name>Then I should see the message "Hi, Demo User" on my account page</name>
+            <title>Then I should see the message "Hi, Demo User" on my account page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-78.0.3904.97'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

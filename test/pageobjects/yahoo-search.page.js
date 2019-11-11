@@ -5,10 +5,8 @@ class YahooPage extends Page  {
   /**
   * define elements
   */
-  //get usernameInput()   { return $('//*[@name="username"]'); }
-
   get searchInput()   { return $('#yschsp'); }
-  get searchButton()  { return $('//input[@class="sbb"]'); }
+  get searchButton()  { return $('.mag-glass'); }
   get resultsList()   { return $('#results'); }
 
   /**

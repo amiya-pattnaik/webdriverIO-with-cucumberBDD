@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Performing_a_Yahoo_Search" timestamp="2019-10-08T23:01:14" time="11.055" tests="0" failures="0" errors="0" skipped="0">
+  <testsuite name="Performing_a_Yahoo_Search" timestamp="2019-11-11T21:05:58" time="9.945" tests="0" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="suiteName" value="Performing a Yahoo Search"/>
-      <property name="capabilities" value="chrome.77_0_3865_90.macosx"/>
+      <property name="capabilities" value="chrome.78_0_3904_97.linux"/>
       <property name="file" value="./test/features/yahoo-search.feature"/>
     </properties>
   </testsuite>
-  <testsuite name="Performing_a_search_operation" timestamp="2019-10-08T23:01:14" time="6.746" tests="4" failures="0" errors="0" skipped="0">
+  <testsuite name="Performing_a_search_operation" timestamp="2019-11-11T21:05:58" time="5.431" tests="4" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="suiteName" value="Performing a search operation"/>
-      <property name="capabilities" value="chrome.77_0_3865_90.macosx"/>
+      <property name="capabilities" value="chrome.78_0_3904_97.linux"/>
       <property name="file" value="./test/features/yahoo-search.feature"/>
     </properties>
-    <testcase classname="chrome.77_0_3865_90.macosx.Performing_a_search_operation" name="Given_I_am_on_the_search_page" time="1.699"/>
-    <testcase classname="chrome.77_0_3865_90.macosx.Performing_a_search_operation" name="When_I_enter_Selenium_Webdriver_into_the_search_box" time="1.362"/>
-    <testcase classname="chrome.77_0_3865_90.macosx.Performing_a_search_operation" name="And_I_click_the_search_button" time="3.445"/>
-    <testcase classname="chrome.77_0_3865_90.macosx.Performing_a_search_operation" name="Then_I_should_see_a_list_of_search_results" time="0.232"/>
+    <testcase classname="chrome.78_0_3904_97.linux.Performing_a_search_operation" name="Given_I_am_on_the_search_page" time="2.711"/>
+    <testcase classname="chrome.78_0_3904_97.linux.Performing_a_search_operation" name="When_I_enter_Selenium_Webdriver_into_the_search_box" time="1.251"/>
+    <testcase classname="chrome.78_0_3904_97.linux.Performing_a_search_operation" name="And_I_click_the_search_button" time="1.4"/>
+    <testcase classname="chrome.78_0_3904_97.linux.Performing_a_search_operation" name="Then_I_should_see_a_list_of_search_results" time="0.064"/>
   </testsuite>
-  <testsuite name="Performing_a_search_operation_with_passing_test_data_as_data_table" timestamp="2019-10-08T23:01:20" time="4.251" tests="4" failures="0" errors="0" skipped="0">
+  <testsuite name="Performing_a_search_operation_with_passing_test_data_as_data_table" timestamp="2019-11-11T21:06:03" time="4.501" tests="4" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="suiteName" value="Performing a search operation with passing test data as data table"/>
-      <property name="capabilities" value="chrome.77_0_3865_90.macosx"/>
+      <property name="capabilities" value="chrome.78_0_3904_97.linux"/>
       <property name="file" value="./test/features/yahoo-search.feature"/>
     </properties>
-    <testcase classname="chrome.77_0_3865_90.macosx.Performing_a_search_operation_with_passing_test_data_as_data_table" name="Given_I_am_on_the_search_page" time="1.731"/>
-    <testcase classname="chrome.77_0_3865_90.macosx.Performing_a_search_operation_with_passing_test_data_as_data_table" name="When_I_enter_Selenium_Webdriver_into_the_search_box" time="1.597"/>
-    <testcase classname="chrome.77_0_3865_90.macosx.Performing_a_search_operation_with_passing_test_data_as_data_table" name="And_I_click_the_search_button" time="0.773"/>
-    <testcase classname="chrome.77_0_3865_90.macosx.Performing_a_search_operation_with_passing_test_data_as_data_table" name="Then_I_should_see_a_list_of_search_results" time="0.144"/>
+    <testcase classname="chrome.78_0_3904_97.linux.Performing_a_search_operation_with_passing_test_data_as_data_table" name="Given_I_am_on_the_search_page" time="2.209"/>
+    <testcase classname="chrome.78_0_3904_97.linux.Performing_a_search_operation_with_passing_test_data_as_data_table" name="When_I_enter_Selenium_Webdriver_into_the_search_box" time="1.2"/>
+    <testcase classname="chrome.78_0_3904_97.linux.Performing_a_search_operation_with_passing_test_data_as_data_table" name="And_I_click_the_search_button" time="0.999"/>
+    <testcase classname="chrome.78_0_3904_97.linux.Performing_a_search_operation_with_passing_test_data_as_data_table" name="Then_I_should_see_a_list_of_search_results" time="0.09"/>
   </testsuite>
 </testsuites>
