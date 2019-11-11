@@ -22,7 +22,8 @@
     "webdriver",
     "automation"
   ],
-  "author": "Amiya Pattanaik <pattnaik_amiya@yahoo.com>",
+  "author": "Martin Coronel <martincxx@gmail.com>",
+  "repository": {"type": "git", "url": "https://github.com/martincxx/webdriverIO-with-cucumberBDD.git"},
   "license": "ISC",
   "dependencies": {
     "@babel/cli": "^7.5.0",
