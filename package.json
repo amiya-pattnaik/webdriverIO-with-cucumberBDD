@@ -8,7 +8,7 @@
 		"selenium-start": "node_modules/.bin/selenium-standalone start",
 		"test": "node_modules/.bin/wdio ./test/config/suite.cucumber.conf.js",
 		"test-mobile": "node node_modules/.bin/wdio ./test/config/suite.appium.conf.js",
-		"allure-report": "node_modules/.bin/allure generate ./test/reports/allure-results && allure open",
+		"allure-report": "node_modules/.bin/allure generate --clean ./test/reports/allure-results && allure open",
 		"junit-report": "node_modules/.bin/junit-viewer --results=./test/reports/junit-results --save=junit-results.html && open junit-results.html"
 	},
 	"keywords": [
