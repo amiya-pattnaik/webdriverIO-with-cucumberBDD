@@ -33,7 +33,6 @@
 		"@babel/preset-env": "^7.2.3",
 		"@babel/register": "^7.0.0",
 		"@wdio/allure-reporter": "^5.11.0",
-		"@wdio/appium-service": "^5.0.0",
 		"@wdio/cli": "^5.11.0",
 		"@wdio/cucumber-framework": "^5.11.0",
 		"@wdio/dot-reporter": "^5.11.0",
@@ -42,6 +41,7 @@
 		"@wdio/spec-reporter": "^5.11.0",
 		"@wdio/sync": "^5.11.0",
 		"allure-commandline": "^2.13.0",
+		"appium": "^1.15.1",
 		"assert": "^2.0.0",
 		"chai": "^4.1.2",
 		"chai-as-promised": "^7.1.1",
@@ -56,6 +56,10 @@
 		"webdriverio": "^5.11.0"
 	},
 	"devDependencies": {
+		"@wdio/appium-service": "^5.16.5",
+		"@wdio/browserstack-service": "^5.0.0",
+		"@wdio/sauce-service": "^5.0.0",
+		"@wdio/selenium-standalone-service": "^5.11.2",
 		"eslint": "^6.6.0",
 		"eslint-config-standard": "^14.1.0",
 		"eslint-plugin-import": "^2.7.0",
@@ -67,9 +71,6 @@
 		"grunt-cucumberjs": "^2.0.2",
 		"node-uuid": "^1.4.7",
 		"selenium-standalone": "^6.8.0",
-		"@wdio/browserstack-service": "^5.0.0",
-		"@wdio/sauce-service": "^5.0.0",
-		"@wdio/selenium-standalone-service": "^5.11.2",
 		"wdio-phantomjs-service": "^0.2.2"
 	},
 	"babel": {
