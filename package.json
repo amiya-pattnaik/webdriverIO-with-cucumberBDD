@@ -4,7 +4,6 @@
 	"description": "WebDriver-v5 bindings for Node.js with Cucumber",
 	"main": "index.js",
 	"scripts": {
-		"node-inspector": "node-inspector --debug-port 5859 --no-preload",
 		"selenium-postinstall": "node_modules/.bin/selenium-standalone install",
 		"selenium-start": "node_modules/.bin/selenium-standalone start",
 		"test": "node_modules/.bin/wdio ./test/config/suite.cucumber.conf.js",
