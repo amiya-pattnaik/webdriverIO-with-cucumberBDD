@@ -6,7 +6,7 @@ class MyAccount extends Page {
     * define elements
     */
 
-    get accountMessage () { return $('//div/h3[contains(., "Hi, Demo User")]'); }
+    get accountMessage () { return $('.text-align-left'); }
 
     /**
      * define or overwrite page methods

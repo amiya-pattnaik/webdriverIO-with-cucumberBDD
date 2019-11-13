@@ -1,4 +1,7 @@
 .idea
 .DS_Store
-node_modules/
+node_modules/*
 npm-debug.log
+test/reports/allure-results/*
+test/reports/junit-results/*
+package-lock.json
