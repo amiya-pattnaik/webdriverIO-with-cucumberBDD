@@ -1,8 +1,9 @@
 const defaultTimeoutInterval = process.env.DEBUG ? (60 * 60 * 500) : 90000;
+const {join } = require('path');
 exports.config = {
 
     specs: [
-        './test/features/*.feature',
+        './test/features/ta-login.feature',
     ],
     // Patterns to exclude.
     exclude: [
@@ -30,10 +31,11 @@ exports.config = {
         appiumVersion: '1.15.0',
         automationName: 'XCUITest',
         platformName: 'iOS',
-        platformVersion: '11.4',
+        platformVersion: '11.3',
         deviceName: 'iPhone Simulator',
+        udid: '37B644EE-DCBF-4B77-86D9-EE632EE56806',
         //deviceName: 'iPhone 6s',
-        browserName: 'Safari',
+        bundleId: 'com.zz.mobile.xx',
         //orientation: 'PORTRAIT',
         //nativeInstrumentsLib: true,
         //isolateSimDevice: true,
@@ -96,8 +98,19 @@ exports.config = {
     // commands. Instead, they hook themselves up into the test process.
     //
     //services: ['selenium-standalone', 'phantomjs'],
-    services: ['appium'],
+    services: ['appium',['native-app-compare',
+        // The options
+       ]],
     //
+    nativeAppCompare: {
+        // Some options, see the docs for more
+        baselineFolder: join(process.cwd(), '.tmp/'),
+        formatImageName: '{tag}-{logName}-{width}x{height}',
+        screenshotPath: join(process.cwd(), '.tmp/'),
+        autoSaveBaseline: true
+        // ... more options
+    },
+    logLevel: 'trace',
     framework: 'cucumber',
     reporters: [
       'spec',
