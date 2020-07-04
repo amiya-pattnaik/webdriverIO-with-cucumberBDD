@@ -1,0 +1,58 @@
+{
+  "uid" : "51fee56f480d688a",
+  "name" : "Given I am on the search page",
+  "fullName" : "Performing a Yahoo Search: Performing a search operation with passing test data as data table.Given I am on the search page",
+  "historyId" : "61146219cdd5340bdd71775fd29184e6",
+  "time" : {
+    "start" : 1570593680963,
+    "stop" : 1570593682694,
+    "duration" : 1731
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-1"
+  }, {
+    "name" : "suite",
+    "value" : "Performing a Yahoo Search: Performing a search operation with passing test data as data table"
+  }, {
+    "name" : "testClass",
+    "value" : "Performing a Yahoo Search: Performing a search operation with passing test data as data table"
+  }, {
+    "name" : "testMethod",
+    "value" : "Given I am on the search page"
+  }, {
+    "name" : "package",
+    "value" : "Performing a Yahoo Search: Performing a search operation with passing test data as data table"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "51fee56f480d688a.json",
+  "parameterValues" : [ "chrome" ]
+}

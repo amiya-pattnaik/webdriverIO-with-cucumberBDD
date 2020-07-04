@@ -1,0 +1,58 @@
+{
+  "uid" : "b92ff530cefa7cc0",
+  "name" : "And I click the search button",
+  "fullName" : "Performing a Yahoo Search: Performing a search operation.And I click the search button",
+  "historyId" : "d33395bfc6c9119a466f445ce3d27499",
+  "time" : {
+    "start" : 1573621626955,
+    "stop" : 1573621628109,
+    "duration" : 1154
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-1"
+  }, {
+    "name" : "suite",
+    "value" : "Performing a Yahoo Search: Performing a search operation"
+  }, {
+    "name" : "testClass",
+    "value" : "Performing a Yahoo Search: Performing a search operation"
+  }, {
+    "name" : "testMethod",
+    "value" : "And I click the search button"
+  }, {
+    "name" : "package",
+    "value" : "Performing a Yahoo Search: Performing a search operation"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-78.0.3904.97"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b92ff530cefa7cc0.json",
+  "parameterValues" : [ "chrome-78.0.3904.97" ]
+}

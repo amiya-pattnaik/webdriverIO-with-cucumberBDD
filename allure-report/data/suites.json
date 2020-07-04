@@ -1,0 +1,251 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Performing a Yahoo Search: Performing a search operation with passing test data as data table",
+    "children" : [ {
+      "name" : "Given I am on the search page",
+      "uid" : "51fee56f480d688a",
+      "parentUid" : "62fa32b191507f6dd0e8aec99942801b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1570593680963,
+        "stop" : 1570593682694,
+        "duration" : 1731
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "When I enter \"Selenium Webdriver\" into the search box",
+      "uid" : "f40a518e72d5e4ef",
+      "parentUid" : "62fa32b191507f6dd0e8aec99942801b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1570593682695,
+        "stop" : 1570593684292,
+        "duration" : 1597
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "And I click the search button",
+      "uid" : "c17daa6bc8d2a098",
+      "parentUid" : "62fa32b191507f6dd0e8aec99942801b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1570593684293,
+        "stop" : 1570593685066,
+        "duration" : 773
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Then I should see a list of search results",
+      "uid" : "49f5b0928a8da497",
+      "parentUid" : "62fa32b191507f6dd0e8aec99942801b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1570593685067,
+        "stop" : 1570593685211,
+        "duration" : 144
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Given I am on the search page",
+      "uid" : "faa6f6a001cadcfe",
+      "parentUid" : "62fa32b191507f6dd0e8aec99942801b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1573621628403,
+        "stop" : 1573621630223,
+        "duration" : 1820
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-78.0.3904.97" ]
+    }, {
+      "name" : "When I enter \"Selenium Webdriver\" into the search box",
+      "uid" : "131474354ed2a284",
+      "parentUid" : "62fa32b191507f6dd0e8aec99942801b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1573621630223,
+        "stop" : 1573621631476,
+        "duration" : 1253
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-78.0.3904.97" ]
+    }, {
+      "name" : "And I click the search button",
+      "uid" : "8cfd429ce72fb4d2",
+      "parentUid" : "62fa32b191507f6dd0e8aec99942801b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1573621631477,
+        "stop" : 1573621632480,
+        "duration" : 1003
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-78.0.3904.97" ]
+    }, {
+      "name" : "Then I should see a list of search results",
+      "uid" : "a9391fd45e859d87",
+      "parentUid" : "62fa32b191507f6dd0e8aec99942801b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1573621632481,
+        "stop" : 1573621632672,
+        "duration" : 191
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-78.0.3904.97" ]
+    } ],
+    "uid" : "62fa32b191507f6dd0e8aec99942801b"
+  }, {
+    "name" : "Performing a login: Performing login operation with passing test data as data table",
+    "children" : [ {
+      "name" : "Given I am on the phptravels page",
+      "uid" : "57fa874cad091b9e",
+      "parentUid" : "7a801112a92dc53069d043be457d0867",
+      "status" : "passed",
+      "time" : {
+        "start" : 1572312740788,
+        "stop" : 1572312746384,
+        "duration" : 5596
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-78.0.3904.70" ]
+    }, {
+      "name" : "When I login with username and password \"user@phptravels.com\" \"demouser\" into the text box",
+      "uid" : "b577f1ac74a5952d",
+      "parentUid" : "7a801112a92dc53069d043be457d0867",
+      "status" : "passed",
+      "time" : {
+        "start" : 1572312746384,
+        "stop" : 1572312746803,
+        "duration" : 419
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-78.0.3904.70" ]
+    }, {
+      "name" : "Then I should see the message \"Hi, Demo User\" on my account page",
+      "uid" : "971e0e1b7e499499",
+      "parentUid" : "7a801112a92dc53069d043be457d0867",
+      "status" : "passed",
+      "time" : {
+        "start" : 1572312746803,
+        "stop" : 1572312748447,
+        "duration" : 1644
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-78.0.3904.70" ]
+    }, {
+      "name" : "Given I am on the phptravels page",
+      "uid" : "67b5c6f448eafdfb",
+      "parentUid" : "7a801112a92dc53069d043be457d0867",
+      "status" : "passed",
+      "time" : {
+        "start" : 1573621623392,
+        "stop" : 1573621629257,
+        "duration" : 5865
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-78.0.3904.97" ]
+    }, {
+      "name" : "When I login with username and password \"user@phptravels.com\" \"demouser\" into the text box",
+      "uid" : "1d6d32776746af10",
+      "parentUid" : "7a801112a92dc53069d043be457d0867",
+      "status" : "broken",
+      "time" : {
+        "start" : 1573621629258,
+        "stop" : 1573621629877,
+        "duration" : 619
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-78.0.3904.97" ]
+    }, {
+      "name" : "Then I should see the message \"Hi, Demo User\" on my account page",
+      "uid" : "e1deb6b5077e8793",
+      "parentUid" : "7a801112a92dc53069d043be457d0867",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1573621629878,
+        "stop" : 1573621629878,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-78.0.3904.97" ]
+    } ],
+    "uid" : "7a801112a92dc53069d043be457d0867"
+  }, {
+    "name" : "Performing a Yahoo Search: Performing a search operation",
+    "children" : [ {
+      "name" : "Given I am on the search page",
+      "uid" : "6bf9385621823901",
+      "parentUid" : "3f030c1cf6732929a242a716a1d4e025",
+      "status" : "passed",
+      "time" : {
+        "start" : 1573621623392,
+        "stop" : 1573621625433,
+        "duration" : 2041
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-78.0.3904.97" ]
+    }, {
+      "name" : "When I enter \"Selenium Webdriver\" into the search box",
+      "uid" : "d5e00010a32531af",
+      "parentUid" : "3f030c1cf6732929a242a716a1d4e025",
+      "status" : "passed",
+      "time" : {
+        "start" : 1573621625434,
+        "stop" : 1573621626955,
+        "duration" : 1521
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-78.0.3904.97" ]
+    }, {
+      "name" : "And I click the search button",
+      "uid" : "b92ff530cefa7cc0",
+      "parentUid" : "3f030c1cf6732929a242a716a1d4e025",
+      "status" : "passed",
+      "time" : {
+        "start" : 1573621626955,
+        "stop" : 1573621628109,
+        "duration" : 1154
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-78.0.3904.97" ]
+    }, {
+      "name" : "Then I should see a list of search results",
+      "uid" : "9f868cc82cdb63f4",
+      "parentUid" : "3f030c1cf6732929a242a716a1d4e025",
+      "status" : "passed",
+      "time" : {
+        "start" : 1573621628109,
+        "stop" : 1573621628391,
+        "duration" : 282
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-78.0.3904.97" ]
+    } ],
+    "uid" : "3f030c1cf6732929a242a716a1d4e025"
+  } ]
+}

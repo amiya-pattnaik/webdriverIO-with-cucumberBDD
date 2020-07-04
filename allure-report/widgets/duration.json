@@ -1,0 +1,181 @@
+[ {
+  "uid" : "b92ff530cefa7cc0",
+  "name" : "And I click the search button",
+  "time" : {
+    "start" : 1573621626955,
+    "stop" : 1573621628109,
+    "duration" : 1154
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8cfd429ce72fb4d2",
+  "name" : "And I click the search button",
+  "time" : {
+    "start" : 1573621631477,
+    "stop" : 1573621632480,
+    "duration" : 1003
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9f868cc82cdb63f4",
+  "name" : "Then I should see a list of search results",
+  "time" : {
+    "start" : 1573621628109,
+    "stop" : 1573621628391,
+    "duration" : 282
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c17daa6bc8d2a098",
+  "name" : "And I click the search button",
+  "time" : {
+    "start" : 1570593684293,
+    "stop" : 1570593685066,
+    "duration" : 773
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d5e00010a32531af",
+  "name" : "When I enter \"Selenium Webdriver\" into the search box",
+  "time" : {
+    "start" : 1573621625434,
+    "stop" : 1573621626955,
+    "duration" : 1521
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "131474354ed2a284",
+  "name" : "When I enter \"Selenium Webdriver\" into the search box",
+  "time" : {
+    "start" : 1573621630223,
+    "stop" : 1573621631476,
+    "duration" : 1253
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b577f1ac74a5952d",
+  "name" : "When I login with username and password \"user@phptravels.com\" \"demouser\" into the text box",
+  "time" : {
+    "start" : 1572312746384,
+    "stop" : 1572312746803,
+    "duration" : 419
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a9391fd45e859d87",
+  "name" : "Then I should see a list of search results",
+  "time" : {
+    "start" : 1573621632481,
+    "stop" : 1573621632672,
+    "duration" : 191
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f40a518e72d5e4ef",
+  "name" : "When I enter \"Selenium Webdriver\" into the search box",
+  "time" : {
+    "start" : 1570593682695,
+    "stop" : 1570593684292,
+    "duration" : 1597
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "faa6f6a001cadcfe",
+  "name" : "Given I am on the search page",
+  "time" : {
+    "start" : 1573621628403,
+    "stop" : 1573621630223,
+    "duration" : 1820
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "971e0e1b7e499499",
+  "name" : "Then I should see the message \"Hi, Demo User\" on my account page",
+  "time" : {
+    "start" : 1572312746803,
+    "stop" : 1572312748447,
+    "duration" : 1644
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6bf9385621823901",
+  "name" : "Given I am on the search page",
+  "time" : {
+    "start" : 1573621623392,
+    "stop" : 1573621625433,
+    "duration" : 2041
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1d6d32776746af10",
+  "name" : "When I login with username and password \"user@phptravels.com\" \"demouser\" into the text box",
+  "time" : {
+    "start" : 1573621629258,
+    "stop" : 1573621629877,
+    "duration" : 619
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "51fee56f480d688a",
+  "name" : "Given I am on the search page",
+  "time" : {
+    "start" : 1570593680963,
+    "stop" : 1570593682694,
+    "duration" : 1731
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "67b5c6f448eafdfb",
+  "name" : "Given I am on the phptravels page",
+  "time" : {
+    "start" : 1573621623392,
+    "stop" : 1573621629257,
+    "duration" : 5865
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "57fa874cad091b9e",
+  "name" : "Given I am on the phptravels page",
+  "time" : {
+    "start" : 1572312740788,
+    "stop" : 1572312746384,
+    "duration" : 5596
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e1deb6b5077e8793",
+  "name" : "Then I should see the message \"Hi, Demo User\" on my account page",
+  "time" : {
+    "start" : 1573621629878,
+    "stop" : 1573621629878,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "49f5b0928a8da497",
+  "name" : "Then I should see a list of search results",
+  "time" : {
+    "start" : 1570593685067,
+    "stop" : 1570593685211,
+    "duration" : 144
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
