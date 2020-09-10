@@ -1,5 +1,5 @@
 import {Given, When, Then} from 'cucumber';
-import loginPage from '../pageobjects/ta-login.page';
+import loginPage from '../pageobjects/herokuapp-login.page';
 import yahooPage from '../pageobjects/yahoo-search.page';
 
 
@@ -16,4 +16,3 @@ When(/^I click the search button$/, function () {
 When(/^I login with username and password "([^"]*)" "([^"]*)" into the text box$/, function (arg1, arg2) {
     loginPage.login(arg1, arg2);    // entering user name, password and and submiting the page
 });
-
