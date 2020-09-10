@@ -1,12 +1,12 @@
 import Page from './page'
 
-class MyAccount extends Page {
+class LandingPage extends Page {
 
     /**
     * define elements
     */
 
-    get accountMessage () { return $('.text-align-left'); }
+    get accountMessage () { return $('//*[@class="subheader"]'); }
 
     /**
      * define or overwrite page methods
@@ -16,14 +16,14 @@ class MyAccount extends Page {
         browser.pause(2000);
     }
 
-    waitForAccountPageToLoad () {
+    waitForLandingPageToLoad () {
       if(!this.accountMessage.isDisplayed()){
         this.accountMessage.waitForDisplayed(5000);
       }
     }
-    getUserInfo (){
+    getMessage (){
       return this.accountMessage.getText();
     }
 }
 
-export default new MyAccount()
+export default new LandingPage();

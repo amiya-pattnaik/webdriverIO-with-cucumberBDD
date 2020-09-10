@@ -1,5 +1,5 @@
 import { Given} from 'cucumber';
-import loginPage from '../pageobjects/ta-login.page';
+import loginPage from '../pageobjects/herokuapp-login.page';
 import yahooPage from '../pageobjects/yahoo-search.page';
 
 
@@ -9,8 +9,7 @@ Given(/^I am on the search page$/, function () {
   browser.getTitle().should.equal('Yahoo Search - Web Search');
 });
 
-Given('I am on the phptravels page', function () {
+Given('I am on the herokuapp login page', function () {
   // Write code here that turns the phrase above into concrete actions
   loginPage.open();     // navigating to login page
-  expect(browser.compareScreen('test',{autoSaveBaseline: true}).misMatchPercentage).equal(0);
 });

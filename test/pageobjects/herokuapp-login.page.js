@@ -7,10 +7,9 @@ class LoginPage extends Page {
     * define elements
     */
 
-    get usernameInput()   { return $('div.form-group:nth-child(1) > input:nth-child(3)'); }
-    get passwordInput()   { return $('.panel-body > div:nth-child(2) > input:nth-child(3)'); }
+    get usernameInput()   { return $('//*[@name="username"]'); }
+    get passwordInput()   { return $('//*[@name="password"]'); }
     get loginButton()     { return $('//button[contains(., "Login")]'); }
-    get headerImage()     { return $('//img[@alt=\"Login\"]'); }
 
     /**
      * define or overwrite page methods

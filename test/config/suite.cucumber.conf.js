@@ -33,21 +33,21 @@ exports.config = {
               browserName: 'chrome',
               // platform: 'Windows 10',
               // version: '50.0',
-              maxInstances: '5',
+              maxInstances: 5,
           },
           //
           // {
           //     browserName: 'firefox',
           //     // platform: 'Windows 10',
           //     // version: '50.0',
-          //     maxInstances: '5',
+          //     maxInstances: 5,
           // },
 
           // {
           //     browserName: 'safari',
           //     // platform: 'Windows 10',
           //     // version: '50.0',
-          //     maxInstances: '5',
+          //     maxInstances: 5,
           // },
           //
           // {
@@ -58,21 +58,10 @@ exports.config = {
           //     ignoreProtectedModeSettings: true,    //only applicable to IE browser
           //     ignoreZoomSetting: true,              //only applicable to IE browser
           //     ensureCleanSession: true,
-          //     maxInstances: '5',
+          //     maxInstances: 5,
           //     // specs: [
           //     //     './test/specs/*.js'
           //     // ],
-          // },
-
-          // {
-          //     browserName: 'phantomjs',
-          //     platform: '',
-          //     version: '',
-          //     maxInstances: '5',
-          //
-          //     //  specs: [
-          //     //    './test/specs/*.js'
-          //     //  ],
           // },
           //
           // {
@@ -86,7 +75,7 @@ exports.config = {
           //     },
           //     platform: '',
           //     version: '',
-          //     maxInstances: '5',
+          //     maxInstances: 5,
           //     // specs: [
           //     //     './test/specs/*.js'
           //     // ],
@@ -96,7 +85,7 @@ exports.config = {
           //     browserName: 'firefox',
           //     // platform: 'Windows 10',
           //     // version: '50.0',
-          //     maxInstances: '5',
+          //     maxInstances: 5,
           //     // flag to activate Firefox headless mode (see https://github.com/mozilla/geckodriver/blob/master/README.md#firefox-capabilities for more details about moz:firefoxOptions)
           //     "moz:firefoxOptions": { args: ['-headless'] }
           // },
@@ -118,7 +107,7 @@ exports.config = {
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", then the base url gets prepended.
     //baseUrl: 'http://localhost:8080',
-    baseUrl: 'http://www.phptravels.net',
+    baseUrl: 'http://the-internet.herokuapp.com/',
     waitforTimeout: 90000,            // Default timeout for all waitFor* commands.
     connectionRetryTimeout: 90000,    // Default timeout in milliseconds for request  if Selenium Grid doesn't send response
     connectionRetryCount: 3,          // Default request retries count
@@ -126,7 +115,31 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    //
+
+    // user: process.env.SAUCE_USERNAME,
+    // key: process.env.SAUCE_ACCESS_KEY,
+    // region: 'us',
+
+    // user: process.env.BROWSERSTACK_USERNAME,
+    // key: process.env.BROWSERSTACK_ACCESS_KEY,
+
+    services: [
+      'selenium-standalone',
+      // for Sauce connect execution
+      // ['sauce', {
+      //       sauceConnect: true,
+      //       sauceConnectOpts: {
+      //           // ...
+      //       }
+      // }],
+
+      // for Browserstack  execution
+      // ['browserstack', {
+      //       browserstackLocal: true
+      //   }]
+    ],
+
+    // Test reporter for stdout and other additional reporting
     reporters: [
       'spec',
       ['junit', {
@@ -134,22 +147,23 @@ exports.config = {
           outputFileFormat: function(opts) { // optional
               return `results-${opts.cid}.${opts.capabilities}.xml`
           }
-        }
-      ],
+        }],
 
       ['allure', {
           outputDir: './test/reports/allure-results/',
           disableWebdriverStepsReporting: true,
           disableWebdriverScreenshotsReporting: false,
-        }
-      ],
+        }],
+
+      ['json',{
+            outputDir: './test/report/json-results'
+        }],
     ],
-
-    services: ['selenium-standalone'],
-    //services: ['selenium-standalone', 'phantomjs', 'appium'],
     //
-    framework: 'cucumber',
+    //
 
+    framework: 'cucumber',
+    //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         requireModule: ['@babel/register'],
