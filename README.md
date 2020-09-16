@@ -5,64 +5,31 @@ This repository contains a collection of sample webdriverIO-v6 (Selenium - Node.
 
 It support ES5 to ES8 (via babel-register) and uses Grunt to manage tasks, provides utilities to read data from MS-Excel, executes SQL statements to any database for end to end testing. It generate Spec, JUNIT, Allure, JSON reporters as well.
 
-💡 If you need the wdio-v5 boilerplate project, please take the code from v4 branch: click [here](https://github.com/amiya-pattnaik/webdriverIO-with-cucumberBDD/tree/wdio-v5)
+💡 If you need the wdio-v5 boilerplate project, please take the code from v5 branch: click [here](https://github.com/amiya-pattnaik/webdriverIO-with-cucumberBDD/tree/wdio-v5)
 
 ### Installation
 
-This project is tested on ***Node v12.0.0*** and Above.  While earlier versions of node may be compatible, they have not been tested or verified.
+This project is tested on **Node v12.0.0** and above.  While earlier versions of node may be compatible, but they have not been verified.
 
-`JDK 1.8:` Install JDK 1.8+ and make sure class path is set properly. JAVA is require to start `Selenium Server` nothing else.
+`Node.JS:` Install  from the site - https://nodejs.org/en/  take the LTS version based on your Operating system. Please make sure you install NodeJS globally. To take full advantage of the command line and use grunt tasks you will need to make sure that you have added `node_modules/.bin` to your `$PATH`.  Otherwise you will need to install `npm install -g  grunt-cli` globally.
 
-`Node.JS:` Install  from the site - https://nodejs.org/en/  take the LTS version based on your Operating system. Please make sure you install NodeJS globally. If you have nvm installed globally, then run `nvm install` to get the latest version of node specified in the`.nvmrc` file [here](/.nvmrc).  If you don't use nvm, be sure that you are using a compatible version. Further details on nvm can be found on the official [github page](https://github.com/creationix/nvm). MAC OSX users are best suited to install nvm with homebrew `brew install nvm`.
 
-Once installation is done - open terminal (MAC OSX) or command prompt (for windows OS) and type below command to verify NodeJS has been installed properly.
-
-        node --version
-        npm --version
-
-Above command should print out the version that you have installed.
-
-Now navigate to the framework's package.json folder and run `npm install` to grab all dependencies.
-
-To take full advantage of the command line and use grunt tasks you will need to make sure that you have added `node_modules/.bin` to your `$PATH`.  Otherwise you will need to install the following globally:
-
-  `npm install -g  grunt-cli`
+`JDK 1.8:` It is optional, install JDK 1.8+ and make sure class path is set properly. JAVA is require to start `Selenium Server` on your local environment nothing else.
 
 ### Selenium, Appium
 
-  To run your test You must have selenium / Appium server up and running to execute any WebdriverIO tests, or it will fail fast with an error. There are two ways you can run selenium.
-
-  Once all the node dependency modules are installed (through `npm install`) then for development, you can run  `npm run selenium-postinstall` followed by `npm run selenium-start` incase if you wish to start it manually else you can use `services: ['selenium-standalone'],` in .conf.js to start it automatically which has been added as part of this project. That's all there is to it.!. Please note that this step is only one time activity at the initial framework set up. Alternatively you can also use below options to start the selenium server.
-
-  1. Install Selenium (selenium-standalone) through NPM (this is the recommended way to install) as you can use it as a services in your framework without worrying to start the selenium server manually. Please note that you follow this below step if `selenium-standalone` package in not been installed through package manager. If you are behind a specific proxy, then in that case you need to set environment variables:
-
-  - On OSX:
-    - NODE_TLS_REJECT_UNAUTHORIZED=0
-
- - On Windows:
-    - setx NODE_TLS_REJECT_UNAUTHORIZED 0
-
-```
-  sudo npm install selenium-standalone@latest -g
-  sudo selenium-standalone install
-  selenium-standalone start
-```
-  OR
-
-  2. Download the latest selenium standalone server version: and then for example
-    $ java -jar selenium-server-standalone-3.4.0.jar. This option is require if you have not done the step No-1. Else ignore it. this is the other way of doing.
-
-  Note: While installing through sudo command - you need to provide System admin password. On windows don't use `sudo`
+To run your test you must have selenium / Appium server up and running to execute any webdriverIO tests, or it will fail fast with an error. To start selenium automatically it has been added as part of `services: ['selenium-standalone']` and `services: ['appium']` in the *.conf.js.  That's all there is to it.!.
 
 ### Run Some Sample Tests
 
 To execute the entire test suite in local development, you can use any one of the options mentioned below
 
-Option 1: `npm run test`
+Option 1: `npm run test-local`. You can also run in SauceLabs and BrowserStack using `npm run test-sauce`, `npm run test-browserstack`.
 
-Option 2: `grunt webdriver:test`.  This executes all features in the [`./test/features/*.feature`]  directory with a Spec reporter by default and references the `suite.yourSpecific.conf.js` file. Refer to the ./test/config of cucumber-bdd
+Option 2: `grunt webdriver:test-local`.  This executes all features in the [`./test/features/*.feature`] directory.
+The default option for Grunt run is `webdriver:test-local`. But you can use `webdriver:test-sauce` or `test-browserstack` based on your requirements.
 
-To execute tests on mobile device use : `npm run test-mobile`
+To execute tests on `mobile device` use : `npm run test-mobile`.
 
 Note: Before running mobile tests, perform the requisite Appium setup. For hassle free Appium setup on OSX refer [appium-setup-made-easy-OSX](https://github.com/amiya-pattnaik/appium-setup-made-easy-OSX) OR refer [Appium Docs](http://appium.io/getting-started.html?lang=en)
 
@@ -72,7 +39,11 @@ WebdriverIO uses configuration files to setup and execute tests in specific ways
 
 ### SauceLabs/BrowserStack Integration
 
-Sample code has been added in for executing tests in SauceLabs/BrowserStack environment. You just need to provide your SauceLabs/BrowserStack credentials in the config file. look for Services sessions in the `*conf.js file`.
+`SauceLabs` and `BrowserStack` specific code has been added in the `wdio.sauce.conf.js` and  `wdio.browserstack.conf.js` under the /test/config folder. You just need to provide your SauceLabs/BrowserStack credentials in the config file. To run test on SauceLabs, execute command `npm run test-sauce` and on BrowserStack `npm run test-browserstack`.
+
+### Logs  
+
+Complete set of execution `logs` will be generated during the run time and can be found in the parent folder location /logs.
 
 ### Reporters
 
