@@ -2,7 +2,7 @@
 .DS_Store
 node_modules/*
 npm-debug.log
-test/reports/allure-results/*
-test/reports/junit-results/*
+test/reports/*
 package-lock.json
 allure-report/*
+logs/*

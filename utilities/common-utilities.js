@@ -4,9 +4,6 @@
  **/
 /****************************************************************************************/
 
-//var xls_json 	= require('../node_modules/node-excel-to-json');
-// var anyDB     = require('../node_modules/any-db');
-// var anyDBJDBC = require('../node_modules/any-db-jdbc');
 var xls_json  = require(	'../node_modules/node-excel-to-json');
 module.exports = {
 
@@ -303,22 +300,6 @@ module.exports = {
   	    });
   },
 
-  /***************************************************************************************/
-  /*
-   * method multiSelector(selectotList)
-   * @param {selectotList} - an arraylist object which contains different alternative selector
-   *for example - ["[href='/guide.html1']", "//*[@id='userid']", "[@class='myclassname']"];
-   **/
-  /****************************************************************************************/
-  multiSelector : function (selectorList) {
-    for (var lookSelector in selectorList){
-      var elem = browser.element(selectorList[lookSelector]);
-      if (elem.type != "NoSuchElement" && elem.state != "failure"){
-        //console.log("the right selector is: "+elem.selector);
-        return elem.selector;
-      } else {console.log("this selector does not exists: "+elem.selector);}
-    }
-  },
 
 /***************************************************************************************/
   //method to generate timestamp in the format: mm/dd/yy hh:mi:ss
@@ -337,22 +318,5 @@ module.exports = {
                   : (now.getSeconds())));
   },
 
-/***************************************************************************************/
-/**
- * function elementWait (locater, timeout)
- * This function will wait for an element for the provided amount of milliseconds to be present.
- *  * @param {*} locater        -  The locator is the xpath that need to verified for the presence.
- **/
-/****************************************************************************************/
-  elementWait : function (locater, timeout) {
-    try {
-      //console.log(locater)
-      browser.waitForExist(locater, timeout);
-
-      } catch (e) {
-        expect(false).toBe(true);
-        throw new Error('Timed out while waiting for control to load : ' + e);
-      }
-    },
 
 } // end of module
