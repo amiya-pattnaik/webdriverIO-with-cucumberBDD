@@ -28,7 +28,7 @@ Option 1: `npm run test-local`. You can also run in SauceLabs and BrowserStack u
 
 To execute tests on `mobile device` use : `npm run test-mobile`.
 
-####  Note: Before running mobile tests, perform the requisite Appium setup. For hassle free Appium setup on OSX refer [appium-setup-made-easy-OSX](https://github.com/amiya-pattnaik/appium-setup-made-easy-OSX) OR refer [Appium Docs](http://appium.io/getting-started.html?lang=en)
+####  Note: Before running mobile tests, perform the requisite Appium setup. For hassle free Appium setup on OSX refer [appium-setup-made-easy-OSX](https://github.com/amiya-pattnaik/appium-setup-made-easy-OSX) OR refer [Appium Docs](https://appium.io/docs/en/about-appium/getting-started/?lang=en)
 
 ### Config Files
 
@@ -56,13 +56,11 @@ Test reporter, that prints detailed results to console.
 
 ##### Allure
 
-The Allure Reporter creates [Allure](http://allure.qatools.ru/) test reports which is an HTML generated website with all necessary information to debug your test results and take a look on error screenshots. Add allure to the reporters array in config file and define the output directory of the allure reports.
+The Allure Reporter creates [Allure](https://docs.qameta.io/allure/) test reports which is an HTML generated website with all necessary information to debug your test results and take a look on error screenshots. Add allure to the reporters array in config file and define the output directory of the allure reports.
 
 To generate and view an allure report locally, run `npm run allure-report`. A typical Allure report will look like this
 
 ![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/allure-report.png)
-
-Allure has several other reporting tools optimized for the CI server of your choice.  You can [view the documentation here](http://wiki.qatools.ru/display/AL/Reporting).
 
 ##### junit/xunit
 
@@ -80,11 +78,11 @@ The JSON reporter is especially versatile. Since it produces a literal in a key 
 
 You can write test by using Cucumber BDD framework. You can choose javascript based design pattern or ES6 based. This project is ES6 friendly (via babel-register)
 
-Refer complete [WebdriverIO v6 API](https://webdriver.io/docs/api.html) methods to write your automation tests.
+Refer complete [WebdriverIO v7 API](https://v7.webdriver.io/docs/api) methods to write your automation tests.
 
 ##### Using Cucumber JavaScript framework
 
-Tests are written in the Cucumber framework using the Gherkin Syntax. More about Gherkin & Cucumber can be found at https://cucumber.io/docs/reference
+Tests are written in the Cucumber framework using the Gherkin Syntax. More about Gherkin & Cucumber can be found at https://cucumber.io/
 
 Tests are place in `*.feature` files in the `/test/features/` directory. A typical test will look similar to this:
 ```
