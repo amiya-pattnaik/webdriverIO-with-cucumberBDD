@@ -1,4 +1,4 @@
-import { Then }     from 'cucumber';
+import { Then } from "@cucumber/cucumber";
 import landingPage  from '../pageobjects/herokuapp-landing.page';
 import yahooPage    from '../pageobjects/yahoo-search.page';
 

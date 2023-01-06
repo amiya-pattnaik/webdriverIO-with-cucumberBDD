@@ -1,4 +1,4 @@
-import { Given} from 'cucumber';
+import { Given } from "@cucumber/cucumber";
 import loginPage from '../pageobjects/herokuapp-login.page';
 import yahooPage from '../pageobjects/yahoo-search.page';
 
