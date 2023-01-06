@@ -28,7 +28,7 @@ Option 1: `npm run test-local`. You can also run in SauceLabs and BrowserStack u
 
 To execute tests on `mobile device` use : `npm run test-mobile`.
 
-###  Note: Before running mobile tests, perform the requisite Appium setup. For hassle free Appium setup on OSX refer [appium-setup-made-easy-OSX](https://github.com/amiya-pattnaik/appium-setup-made-easy-OSX) OR refer [Appium Docs](http://appium.io/getting-started.html?lang=en)
+####  Note: Before running mobile tests, perform the requisite Appium setup. For hassle free Appium setup on OSX refer [appium-setup-made-easy-OSX](https://github.com/amiya-pattnaik/appium-setup-made-easy-OSX) OR refer [Appium Docs](http://appium.io/getting-started.html?lang=en)
 
 ### Config Files
 
@@ -60,7 +60,7 @@ The Allure Reporter creates [Allure](http://allure.qatools.ru/) test reports whi
 
 To generate and view an allure report locally, run `npm run allure-report`. A typical Allure report will look like this
 
-![ScreenShot](https://github.com/allure-framework/allure2/blob/master/.github/readme-img.png)
+![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/allure-report.png)
 
 Allure has several other reporting tools optimized for the CI server of your choice.  You can [view the documentation here](http://wiki.qatools.ru/display/AL/Reporting).
 
