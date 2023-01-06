@@ -1,5 +1,5 @@
 
-### WebdriverIO-v6 boilerplate code with Cucumber BDD
+### WebdriverIO-v7 boilerplate code with Cucumber BDD
 
 This repository contains a collection of sample webdriverIO-v7 (Selenium - Node.js/JavaScript) projects and libraries that demonstrate how to use the tool and develop automation script using the Cucumber (v6.x) BDD framework. It uses the `chromedriver` NPM package that wraps the ChromeDriver for you. This service does not require a Selenium server, but uses ChromeDriver to communicate with the browser directly.
 
