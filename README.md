@@ -46,6 +46,18 @@ Complete set of execution `logs` will be generated during the run time and can b
 
 WebdriverIO uses several different types of test reporters to communicate pass/failure.  
 
+##### Allure
+
+The Allure Reporter creates [Allure](https://docs.qameta.io/allure/) test reports which is an HTML generated website with all necessary information to debug your test results and take a look on error screenshots. Add allure to the reporters array in config file and define the output directory of the allure reports.  Please note, this has been added in wdio.shared.config.
+
+To generate and view an Allure report inside your corp network or locally, run `npm run allure-report`. A typical Allure report will look like this. The Allure report is hosted on a `web server` and can be accessed through http://YourMachineIP:5050/ and also generated locally which can be found at `./allure-report/index.html`.
+
+![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/allure-report.png)
+
+To generate and view the Junit/Xunit report inside your corp network or locally, run `npm run xunit-report`. A typical Junit/Xunit report will look like this. The Junit/Xunit report is hosted on a `web server` and can be accessed through http://YourMachineIP:3000/ and also generated locally which can be found at `./xunit-report/xunit-report.html`
+
+![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/xunit-report.png)
+
 ##### Dot
 
 To use the dot reporter just add 'dot' to the reporters array in the config file. The dot reporter prints for each test spec a dot. If colors are enabled on your machine you will see three different colors for dots. Yellow dots mean that at least one browser has executed that spec. A green dot means all browser passed that spec and a red to means that at least one browser failed that spec. All config files have this turned on by default.
@@ -53,26 +65,6 @@ To use the dot reporter just add 'dot' to the reporters array in the config file
 ##### Spec
 
 Test reporter, that prints detailed results to console.
-
-##### Allure
-
-The Allure Reporter creates [Allure](https://docs.qameta.io/allure/) test reports which is an HTML generated website with all necessary information to debug your test results and take a look on error screenshots. Add allure to the reporters array in config file and define the output directory of the allure reports.
-
-To generate and view an allure report locally, run `npm run allure-report`. A typical Allure report will look like this
-
-![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/allure-report.png)
-
-##### junit/xunit
-
-The JUnit reporter helps you to create xml reports for your CI server. Add it to the reports array in the config file and define the directory where the xml files should get stored. webdriverIO will create an xml file for each instance under test and the filename will contain the browser and OS.
-
-To generate and view an junit/xunit report locally, run `npm run junit-report`. A typical junit/xunit report will look like this
-
-![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/junit-result.png)
-
-##### JSON
-
-The JSON reporter is especially versatile. Since it produces a literal in a key : value pair, help to read, translate execution results to any custom reporter / it can be used to transport reporter events to another process and format them there, or to store the execution results back to any standard RDBMS or to NoSQL like mongodb with very minimal effort.
 
 ### Develop automation scripts (for both desktop browser and mobile browser / app)
 
