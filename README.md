@@ -54,6 +54,14 @@ To generate and view an Allure report inside your corp network or locally, run `
 
 ![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/allure-report.png)
 
+<<<<<<< HEAD
+=======
+
+##### Junit/Xunit
+
+A WebdriverIO reporter that creates Jenkins compatible XML based JUnit/Xunit reports. Add it to the reports array in the config file and define the directory where the xml files should get stored. webdriverIO will create an xml file for each instance under test and the filename will contain the browser and OS. Please note, this has been added in wdio.shared.config.
+
+>>>>>>> wdio-v7
 To generate and view the Junit/Xunit report inside your corp network or locally, run `npm run xunit-report`. A typical Junit/Xunit report will look like this. The Junit/Xunit report is hosted on a `web server` and can be accessed through http://YourMachineIP:3000/ and also generated locally which can be found at `./xunit-report/xunit-report.html`
 
 ![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/xunit-report.png)
