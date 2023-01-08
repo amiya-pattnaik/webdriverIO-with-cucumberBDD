@@ -50,7 +50,7 @@ WebdriverIO uses several different types of test reporters to communicate pass/f
 
 The Allure Reporter creates [Allure](https://docs.qameta.io/allure/) test reports which is an HTML generated website with all necessary information to debug your test results and take a look on error screenshots. Add allure to the reporters array in config file and define the output directory of the allure reports.  Please note, this has been added in wdio.shared.config.
 
-To generate and view an Allure report inside your corp network or locally, run `npm run allure-report`. A typical Allure report will look like this. The Allure report is hosted on a `web server` and can be accessed through http://<YourMachineIP>:5050/ and also generated locally which can be found at `./allure-report/index.html`.
+To generate and view an Allure report inside your corp network or locally, run `npm run allure-report`. A typical Allure report will look like this. The Allure report is hosted on a `web server` and can be accessed through http://YourMachineIP:5050/ and also generated locally which can be found at `./allure-report/index.html`.
 
 ![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/allure-report.png)
 
@@ -58,7 +58,7 @@ To generate and view an Allure report inside your corp network or locally, run `
 
 A WebdriverIO reporter that creates Jenkins compatible XML based JUnit/Xunit reports. Add it to the reports array in the config file and define the directory where the xml files should get stored. webdriverIO will create an xml file for each instance under test and the filename will contain the browser and OS. Please note, this has been added in wdio.shared.config.
 
-To generate and view the Junit/Xunit report inside your corp network or locally, run `npm run xunit-report`. A typical Junit/Xunit report will look like this. The Junit/Xunit report is hosted on a `web server` and can be accessed through http://<YourMachineIP>:3000/ and also generated locally which can be found at `./xunit-report/xunit-report.html`
+To generate and view the Junit/Xunit report inside your corp network or locally, run `npm run xunit-report`. A typical Junit/Xunit report will look like this. The Junit/Xunit report is hosted on a `web server` and can be accessed through http://YourMachineIP:3000/ and also generated locally which can be found at `./xunit-report/xunit-report.html`
 
 ![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/xunit-report.png)
 
