@@ -34,6 +34,8 @@ To execute tests on `mobile device` use : `npm run test-mobile`.
 
 WebdriverIO uses configuration files to setup and execute tests in specific ways.  The configuration is fully customizable, and different functions can be invoked before, during and after each test or test suite.  Config files can be found in the `/test/config/` directory and all end with `*.conf.js`.  These can be called via the the cli.
 
+=======
+
 ### SauceLabs, BrowserStack and LambdaTest Integration
 
 `SauceLabs`,  `BrowserStack` and `lambdatest` specific code has been added in the `wdio.sauce.conf.js`,  `wdio.browserstack.conf.js` and `wdio.lambdatest.conf.js` under the /test/config folder. You just need to provide your SauceLabs/BrowserStack/LambdaTest credentials in the config file. To run test on SauceLabs, execute command `npm run test-sauce` to run test on BrowserStack `npm run test-browserstack`, to run test on LambdaTest `npm run test-lambdatest`.
@@ -41,6 +43,8 @@ WebdriverIO uses configuration files to setup and execute tests in specific ways
 ### Logs  
 
 Complete set of execution `logs` will be generated during the run time and can be found in the parent folder location /logs.
+
+=======
 
 ### Reporters
 
@@ -50,22 +54,19 @@ WebdriverIO uses several different types of test reporters to communicate pass/f
 
 The Allure Reporter creates [Allure](https://docs.qameta.io/allure/) test reports which is an HTML generated website with all necessary information to debug your test results and take a look on error screenshots. Add allure to the reporters array in config file and define the output directory of the allure reports.  Please note, this has been added in wdio.shared.config.
 
-To generate and view an Allure report inside your corp network or locally, run `npm run allure-report`. A typical Allure report will look like this. The Allure report is hosted on a `web server` and can be accessed through http://YourMachineIP:5050/ and also generated locally which can be found at `./allure-report/index.html`.
+To generate and view an Allure report inside your corp network or locally, run `npm run allure-report`. The Allure report is hosted on a `web server` and can be accessed through http://YourMachineIP:5050/ and also generated locally which can be found at `./allure-report/index.html`. A typical Allure report will look like this.
 
 ![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/allure-report.png)
 
-<<<<<<< HEAD
 =======
 
 ##### Junit/Xunit
 
-A WebdriverIO reporter that creates Jenkins compatible XML based JUnit/Xunit reports. Add it to the reports array in the config file and define the directory where the xml files should get stored. webdriverIO will create an xml file for each instance under test and the filename will contain the browser and OS. Please note, this has been added in wdio.shared.config.
-
->>>>>>> wdio-v7
-To generate and view the Junit/Xunit report inside your corp network or locally, run `npm run xunit-report`. A typical Junit/Xunit report will look like this. The Junit/Xunit report is hosted on a `web server` and can be accessed through http://YourMachineIP:3000/ and also generated locally which can be found at `./xunit-report/xunit-report.html`
+To generate and view the Junit/Xunit report inside your corp network or locally, run `npm run xunit-report`.  The Junit/Xunit report is hosted on a `web server` and can be accessed through http://YourMachineIP:3000/ and also generated locally which can be found at `./xunit-report/xunit-report.html`.A typical Junit/Xunit report will look like this.
 
 ![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/xunit-report.png)
 
+=======
 ##### Dot
 
 To use the dot reporter just add 'dot' to the reporters array in the config file. The dot reporter prints for each test spec a dot. If colors are enabled on your machine you will see three different colors for dots. Yellow dots mean that at least one browser has executed that spec. A green dot means all browser passed that spec and a red to means that at least one browser failed that spec. All config files have this turned on by default.
@@ -73,6 +74,8 @@ To use the dot reporter just add 'dot' to the reporters array in the config file
 ##### Spec
 
 Test reporter, that prints detailed results to console.
+
+=======
 
 ### Develop automation scripts (for both desktop browser and mobile browser / app)
 
@@ -158,6 +161,7 @@ class LoginPage extends Page {
 export default new LoginPage()
 
 ```
+=======
 ### Additional Utilities (out of scope of this framework)
 #### Working with DataBase
 
