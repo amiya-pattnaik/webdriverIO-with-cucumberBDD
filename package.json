@@ -8,8 +8,8 @@
   "main": "./node_modules/.bin/wdio",
   "scripts": {
     "allure:history": "mkdir -p allure-report/history ./test/reports/allure-results/history && cp -a allure-report/history ./test/reports/allure-results/",
-    "allure-report": "node_modules/.bin/allure generate --clean ./test/reports/allure-results && allure open",
-    "junit-report": "node_modules/.bin/junit-viewer --results=./test/reports/junit-results --save=junit-results.html && open junit-results.html",
+    "allure-report": "node_modules/.bin/allure generate --clean ./test/reports/allure-results && allure open -p 5050",
+    "xunit-report": "node_modules/.bin/xunit-viewer --server -p=3000 -t='Automation Test Report' --results=./test/reports/junit-results --output=./xunit-report/xunit-report.html",
     "test-sauce": "wdio ./test/config/wdio.sauce.conf.js",
     "test-browserstack": "wdio ./test/config/wdio.browserstack.conf.js",
     "test-lambdatest": "wdio ./test/config/wdio.lambdatest.conf.js",
@@ -57,13 +57,13 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "junit-viewer": "^4.4.0",
     "node-excel-to-json": "0.0.3",
     "underscore": "^1.11.0",
     "wdio-chromedriver-service": "^7",
     "wdio-json-reporter": "^3.0.0",
     "wdio-lambdatest-service": "^1.0.14",
-    "webdriverio": "^7"
+    "webdriverio": "^7",
+    "xunit-viewer": "^7.2.0"
   },
   "dependencies": {
     "@wdio/codemod": "^0.12.0",
