@@ -5,11 +5,11 @@ This repository contains a collection of sample webdriverIO-v7 (Selenium - Node.
 
 It support ES5 to ES8 (via babel-register) and uses Grunt to manage tasks, provides utilities to read data from MS-Excel, executes SQL statements to any database for end to end testing. It generate Spec, JUNIT, Allure, JSON reporters as well.
 
-💡 If you need the wdio-v6 boilerplate project, please take the code from v5 branch: click [here](https://github.com/amiya-pattnaik/webdriverIO-with-cucumberBDD/tree/wdio-v6)
+💡 If you need the wdio-v6 boilerplate project, please take the code from v6 branch: click [here](https://github.com/amiya-pattnaik/webdriverIO-with-cucumberBDD/tree/wdio-v6)
 
 ### Installation
 
-This project is tested on **Node v14.0.0** and above.  While earlier versions of node may be compatible, but they have not been verified.
+This project is tested on **Node v15.0.0** and above.  While earlier versions of node may be compatible, but they have not been verified.
 
 `Node.JS:` Install  from the site - https://nodejs.org/en/  take the LTS version based on your Operating system. Please make sure you install NodeJS globally. To take full advantage of the command line you will need to make sure that you have added `node_modules/.bin` to your `$PATH`.  Otherwise you will need to install `npm install -g` globally.
 
@@ -53,6 +53,7 @@ The Allure Reporter creates [Allure](https://docs.qameta.io/allure/) test report
 To generate and view an Allure report inside your corp network or locally, run `npm run allure-report`. A typical Allure report will look like this. The Allure report is hosted on a `web server` and can be accessed through http://YourMachineIP:5050/ and also generated locally which can be found at `./allure-report/index.html`.
 
 ![ScreenShot](https://github.com/amiya-pattnaik/snapshots/blob/master/allure-report.png)
+
 
 ##### Junit/Xunit
 
@@ -155,8 +156,8 @@ class LoginPage extends Page {
 export default new LoginPage()
 
 ```
-
-### Working with DataBase
+### Additional Utilities (out of scope of this framework)
+#### Working with DataBase
 
 A relational database is, simply, a database that stores related information across multiple tables and allows you to query information in more than one table at the same time. Your application under test displays data from these database. So when you are actually performing automation testing it is very likely that you need to verify the data between actual (which you got it from browser) Vs expected (which you will get it from the database by executing SQL statements on database). This can be done by below statements in your code.
 ```
