@@ -1,7 +1,7 @@
-const { config } = require('./wdio.shared.conf')
+import { config as sharedConfig } from './wdio.shared.conf.ts'
 
-exports.config = {
-    ...config,
+export const config: WebdriverIO.Config = {
+    ...sharedConfig,
     ...{
         user: process.env.SAUCE_USERNAME,
         key: process.env.SAUCE_ACCESS_KEY,
@@ -9,7 +9,7 @@ exports.config = {
         services: ['sauce'],
         capabilities: [{
             maxInstances: 5,
-            browserName: 'firefox',
+            browserName: 'chrome',
             browserVersion: 'latest',
             platformName: 'Windows 10',
             'sauce:options': {

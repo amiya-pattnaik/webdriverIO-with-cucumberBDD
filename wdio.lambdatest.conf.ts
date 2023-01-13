@@ -1,7 +1,7 @@
-const { config } = require('./wdio.shared.conf')
+import { config as sharedConfig } from './wdio.shared.conf.ts';
 
-exports.config = {
-    ...config,
+export const config: WebdriverIO.Config = {
+    ...sharedConfig,
     ...{
       user: process.env.LT_USERNAME,
       key: process.env.LT_ACCESS_KEY,

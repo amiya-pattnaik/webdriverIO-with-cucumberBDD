@@ -1,4 +1,4 @@
-const { config } = require('./wdio.shared.conf')
+import { config as sharedConfig } from './wdio.shared.conf.ts';
 
 exports.config = {
     ...config,
