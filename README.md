@@ -70,7 +70,7 @@ Test reporter, that prints detailed results to console.
 
 ### Develop automation scripts (for both desktop browser and mobile browser / app)
 
-You can write test by using Cucumber BDD framework. You can choose javascript based design pattern or ES6 based. This project is ES6 friendly (via babel-register)
+You can write test by using Cucumber BDD framework. You can choose javascript based design pattern or ES6 based.
 
 Refer complete [WebdriverIO v8 API](https://webdriver.io/docs/api) methods to write your automation tests.
 
